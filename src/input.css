@@ -1,0 +1,45 @@
+@import url( 'https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+@theme {
+    --font-sans: "Montserrat", sans-serif;
+    --font-cormorant: "Cormorant", serif;
+    --color-text-60: #717171;
+    --color-text-100: #1A1A1A;
+    --color-action-20: #F7FAF0;
+    --color-surface-20: #EFF0EB;
+    --text-xxs: 10px;
+    --tracking-link: 2px;
+    --shadow-header: 0px 4px 12px 0px #1A1A1A40;
+    --container-max-width-xl: 1366px;
+    --container-padding: 1rem;
+    --container-padding-md: 3rem;
+}
+
+ 
+h3, .h3 {
+  @apply font-cormorant text-[32px] leading-10 font-normal
+}
+
+.btn {
+    @apply duration-300 active:scale-95 flex items-center justify-center gap-3 font-semibold cursor-pointer text-xxs leading-3 tracking-link uppercase px-6 py-3 rounded-3xl ring-1 whitespace-nowrap;
+}
+
+.btn-primary {
+    @apply bg-[#1A1A1A] text-white ring-[#1A1A1A] hover:bg-transparent hover:text-text-100;
+}
+
+.btn-hovered-invert {
+  @apply hover:text-white hover:ring-white
+}
+
+.hovered-links a {
+  @apply border-b border-transparent hover:border-text-100 duration-300 py-0.5
+}
+
+@media (max-width: 767px) {
+  .aos-desktop-only {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
