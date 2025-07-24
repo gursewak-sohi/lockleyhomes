@@ -41,22 +41,28 @@
         </div>
       </div>
       <div class="max-w-max-width-xl w-full z-20 flex justify-end fixed left-1/2 -translate-x-1/2">
-        <div @click.away="open = false" :class="open ? 'h-[384px]' : 'h-0'" class="shadow-xl w-full max-w-full md:max-w-[283px] bg-white top-[100px] right-0 overflow-hidden duration-300">
+        <div @click.away="open = false" :class="open ? 'h-[482px] md:h-[384px]' : 'h-0'" class="shadow-xl w-full max-w-full md:max-w-[283px] bg-white top-[100px] right-0 overflow-hidden duration-300">
           <ul class="flex flex-col uppercase font-semibold text-xxs leading-3 tracking-link">
-            <li class="border-b border-[#D9D9D9]">
-              <a class="px-8 md:px-12 py-8 block hover:bg-surface-20 duration-300" href="#">Bespoke homes</a>
+            <li class="border-b border-text-60/20 block md:hidden">
+              <a class="px-8 md:px-12 py-7 md:py-8 block hover:bg-surface-20 duration-300" href="#">Find your home</a>
             </li>
-            <li class="border-b border-[#D9D9D9]">
-              <a class="px-8 md:px-12 py-8 block hover:bg-surface-20 duration-300" href="#">About Us</a>
+            <li class="border-b border-text-60/20 block md:hidden">
+              <a class="px-8 md:px-12 py-7 md:py-8 block hover:bg-surface-20 duration-300" href="#">Customer care</a>
             </li>
-            <li class="border-b border-[#D9D9D9]">
-              <a class="px-8 md:px-12 py-8 block hover:bg-surface-20 duration-300" href="#">Land</a>
+            <li class="border-b border-text-60/20">
+              <a class="px-8 md:px-12 py-7 md:py-8 block hover:bg-surface-20 duration-300" href="#">Bespoke homes</a>
             </li>
-            <li class="border-b border-[#D9D9D9]">
-              <a class="px-8 md:px-12 py-8 block hover:bg-surface-20 duration-300" href="#">Latest News</a>
+            <li class="border-b border-text-60/20">
+              <a class="px-8 md:px-12 py-7 md:py-8 block hover:bg-surface-20 duration-300" href="#">About Us</a>
+            </li>
+            <li class="border-b border-text-60/20">
+              <a class="px-8 md:px-12 py-7 md:py-8 block hover:bg-surface-20 duration-300" href="#">Land</a>
+            </li>
+            <li class="border-b border-text-60/20">
+              <a class="px-8 md:px-12 py-7 md:py-8 block hover:bg-surface-20 duration-300" href="#">Latest News</a>
             </li>
             <li class="">
-              <a class="px-8 md:px-12 py-8 block hover:bg-surface-20 duration-300" href="#">Contact Us</a>
+              <a class="px-8 md:px-12 py-7 md:py-8 block hover:bg-surface-20 duration-300" href="#">Contact Us</a>
             </li>
           </ul>
         </div>
@@ -65,19 +71,36 @@
 
     
     <!-- Filter Section -->
-    <section x-data="{ houseTypeOpen: false, bedroomOpen: false, priceOpen: false, houseType: 'House Type', bedroom: 'Bedrooms', price: 'Price' }" 
-         @click.outside="houseTypeOpen = bedroomOpen = priceOpen = false"
-         class="bg-text-100 pt-[154px] md:mt-[-100px] pb-5 text-white text-sm">
-        <div class="max-w-max-width-xl w-full mx-auto px-4 md:px-6 lg:px-12">
-          <div class="grid grid-cols-2">
+    <section x-data="{ milesOpen: false, houseTypeOpen: false, bedroomOpen: false, priceOpen: false, miles: '50 miles', houseType: 'House Type', bedroom: 'Bedrooms', price: 'Price' }" 
+         @click.outside="milesOpen = houseTypeOpen = bedroomOpen = priceOpen = false"
+         class="bg-text-100 pt-8 md:pt-[154px] md:mt-[-100px] pb-4 md:pb-5 text-white text-sm">
+        <div data-aos="fade-in" data-aos-delay="500" class="max-w-max-width-xl w-full mx-auto md:px-6 lg:px-12">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-0">
             
             <!-- Left Column -->
-            <div class="flex items-center gap-12 pr-[34px] py-1.5 border-r border-text-60">
+            <div class="flex items-center gap-2 px-4 md:px-0 md:pr-[34px] py-1 md:border-r border-text-60">
               <div class="flex flex-1">
                 <input type="text" value="Worcestershire, UK" class="text-base border-b border-text-60 focus:outline-none text-white py-1 w-full">
               </div>
-              <div class="flex items-center gap-5">
-                <div class="">50 miles</div>
+              <!-- Location and Miles -->
+              <div class="flex items-center relative">
+                <!-- Dropdown Button -->
+                <button @click="milesOpen = !milesOpen; houseTypeOpen = bedroomOpen = priceOpen = false" type="button" class="text-sm pl-5 md:pl-10 pr-5 cursor-pointer">
+                  <span x-text="miles"></span>
+                </button>
+
+                <!-- Dropdown List -->
+                <div x-show="milesOpen" x-transition 
+                    class="absolute top-12 left-0 w-full bg-white text-black shadow-lg z-10">
+                  <ul>
+                    <li @click="miles = '10 miles'; milesOpen = false" class="px-4 py-2.5 hover:bg-surface-20 cursor-pointer border-b border-text-60/20">10 miles</li>
+                    <li @click="miles = '25 miles'; milesOpen = false" class="px-4 py-2.5 hover:bg-surface-20 cursor-pointer border-b border-text-60/20">25 miles</li>
+                    <li @click="miles = '50 miles'; milesOpen = false" class="px-4 py-2.5 hover:bg-surface-20 cursor-pointer border-b border-text-60/20">50 miles</li>
+                    <li @click="miles = '100 miles'; milesOpen = false" class="px-4 py-2.5 hover:bg-surface-20 cursor-pointer">100 miles</li>
+                  </ul>
+                </div>
+
+                <!-- Enter Button -->
                 <button class="cursor-pointer" type="button">
                   <img src="assets/images/svg/enter.svg" alt="enter"/>
                 </button>
@@ -88,48 +111,48 @@
             <div class="grid grid-cols-3 relative">
               <!-- House Type -->
               <div class="relative">
-                <button @click="houseTypeOpen = !houseTypeOpen; bedroomOpen = priceOpen = false" 
+                <button @click="houseTypeOpen = !houseTypeOpen; milesOpen = bedroomOpen = priceOpen = false" 
                         class="w-full cursor-pointer py-2.5 border-r border-text-60">
                   <span x-text="houseType"></span>
                 </button>
                 <div x-show="houseTypeOpen" x-transition 
-                    class="absolute left-0 w-full bg-white text-black shadow-lg z-10">
+                    class="absolute left-0 top-12 w-full bg-white text-black shadow-lg z-10">
                   <ul>
-                    <li @click="houseType = 'Apartment'; houseTypeOpen = false" class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Apartment</li>
-                    <li @click="houseType = 'Villa'; houseTypeOpen = false" class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Villa</li>
-                    <li @click="houseType = 'Cottage'; houseTypeOpen = false" class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Cottage</li>
+                    <li @click="houseType = 'Apartment'; houseTypeOpen = false" class="px-4 py-2.5 hover:bg-surface-20 cursor-pointer border-b border-text-60/20">Apartment</li>
+                    <li @click="houseType = 'Villa'; houseTypeOpen = false" class="px-4 py-2.5 hover:bg-surface-20 cursor-pointer border-b border-text-60/20">Villa</li>
+                    <li @click="houseType = 'Cottage'; houseTypeOpen = false" class="px-4 py-2.5 hover:bg-surface-20 cursor-pointer">Cottage</li>
                   </ul>
                 </div>
               </div>
 
               <!-- Bedrooms -->
               <div class="relative">
-                <button @click="bedroomOpen = !bedroomOpen; houseTypeOpen = priceOpen = false" 
+                <button @click="bedroomOpen = !bedroomOpen; milesOpen = houseTypeOpen = priceOpen = false" 
                         class="w-full cursor-pointer py-2.5 border-r border-text-60">
                   <span x-text="bedroom"></span>
                 </button>
                 <div x-show="bedroomOpen" x-transition 
-                    class="absolute left-0 w-full bg-white text-black shadow-lg z-10">
+                    class="absolute left-0 top-12 w-full bg-white text-black shadow-lg z-10">
                   <ul>
-                    <li @click="bedroom = '1 Bedroom'; bedroomOpen = false" class="px-4 py-2 hover:bg-gray-100 cursor-pointer">1 Bedroom</li>
-                    <li @click="bedroom = '2 Bedrooms'; bedroomOpen = false" class="px-4 py-2 hover:bg-gray-100 cursor-pointer">2 Bedrooms</li>
-                    <li @click="bedroom = '3+ Bedrooms'; bedroomOpen = false" class="px-4 py-2 hover:bg-gray-100 cursor-pointer">3+ Bedrooms</li>
+                    <li @click="bedroom = '1 Bedroom'; bedroomOpen = false" class="px-4 py-2.5 hover:bg-surface-20 cursor-pointer border-b border-text-60/20">1 Bedroom</li>
+                    <li @click="bedroom = '2 Bedrooms'; bedroomOpen = false" class="px-4 py-2.5 hover:bg-surface-20 cursor-pointer border-b border-text-60/20">2 Bedrooms</li>
+                    <li @click="bedroom = '3+ Bedrooms'; bedroomOpen = false" class="px-4 py-2.5 hover:bg-surface-20 cursor-pointer">3+ Bedrooms</li>
                   </ul>
                 </div>
               </div>
 
               <!-- Price -->
               <div class="relative">
-                <button @click="priceOpen = !priceOpen; houseTypeOpen = bedroomOpen = false" 
+                <button @click="priceOpen = !priceOpen; milesOpen = houseTypeOpen = bedroomOpen = false" 
                         class="w-full cursor-pointer py-2.5">
                   <span x-text="price"></span>
                 </button>
                 <div x-show="priceOpen" x-transition 
-                    class="absolute left-0 w-full bg-white text-black shadow-lg z-10">
+                    class="absolute left-0 w-full top-12 bg-white text-black shadow-lg z-10">
                   <ul>
-                    <li @click="price = 'Under $500k'; priceOpen = false" class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Under $500k</li>
-                    <li @click="price = '$500k–$1M'; priceOpen = false" class="px-4 py-2 hover:bg-gray-100 cursor-pointer">$500k–$1M</li>
-                    <li @click="price = 'Over $1M'; priceOpen = false" class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Over $1M</li>
+                    <li @click="price = 'Under $500k'; priceOpen = false" class="px-4 py-2.5 hover:bg-surface-20 cursor-pointer border-b border-text-60/20">Under $500k</li>
+                    <li @click="price = '$500k–$1M'; priceOpen = false" class="px-4 py-2.5 hover:bg-surface-20 cursor-pointer border-b border-text-60/20">$500k–$1M</li>
+                    <li @click="price = 'Over $1M'; priceOpen = false" class="px-4 py-2.5 hover:bg-surface-20 cursor-pointer border-b border-text-60/20">Over $1M</li>
                   </ul>
                 </div>
               </div>
@@ -140,9 +163,138 @@
       </section>
 
     
-     
+     <!-- Property Listing -->
+      <section class="pb-14 md:pb-0">
+        <div class="max-w-max-width-xl w-full mx-auto px-4 md:px-6 lg:px-12">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-0">
+            <div class="py-8 md:py-10 md:pr-[34px] md:h-svh overflow-hidden hover:overflow-auto scrollbar">
+              <div class="flex flex-col gap-5">
+                <!-- Property Card -->
+                <div data-aos="fade-up" data-aos-delay="500" class="bg-action-40 flex flex-col gap-4">
+                  <div class="grid grid-cols-1 xl:grid-cols-2">
+                    <div class="aspect-[300/205]">
+                      <img class="size-full object-cover" src="assets/images/property/little-acre.jpg" alt="property">
+                    </div>
+                    <div class="flex flex-col py-3 px-4 md:px-6">
+                      <div class="text-right font-semibold text-sm mb-2">24.2 miles</div>
+                      <h3 class="border-b border-text-20 font-cormorant pb-1 mb-6">Little Acre</h3>
+                      <ul class="flex flex-col gap-2 text-sm font-semibold">
+                        <li class="flex items-center gap-2">
+                          <img src="assets/images/svg/house-type.svg" alt="icon">
+                          <span>4 bedroom houses</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                          <img src="assets/images/svg/price.svg" alt="icon">
+                          <span>Prices from £1,150,000</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                          <img src="assets/images/svg/address.svg" alt="icon">
+                          <span>4 bedroom houses</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="flex flex-col gap-3.5 px-4 md:px-6 pb-5">
+                    <div class="flex items-center justify-between">
+                      <div class="text-xxs uppercase tracking-link font-semibold">one plot remaining</div>
+                      <a class="btn btn-primary" href="javascript:;">see details</a>
+                    </div>
+                    <p class="text-sm leading-5">Dignissim cursus nulla fermentum eu vitae placerat diam. Fringilla sam dui posuere libero, tincidunt massa porttitor eu integer. Mauris el volutpat nunc pretium volut pat donec morbi ultrices mi commodo.</p>
+                  </div>
+                </div>    
 
-    <div class="h-96"></div>
+                <!-- Property Card -->
+                <div data-aos="fade-up" data-aos-delay="700" class="bg-surface-10 flex flex-col gap-4">
+                  <div class="grid grid-cols-1 xl:grid-cols-2">
+                    <div class="aspect-[300/205]">
+                      <img class="size-full object-cover" src="assets/images/property/britannia-gardens.jpg" alt="property">
+                    </div>
+                    <div class="flex flex-col py-3 px-4 md:px-6">
+                      <div class="text-right font-semibold text-sm mb-2">36.6 miles</div>
+                      <h3 class="border-b border-text-20 font-cormorant pb-1 mb-6">Britannia Gardens</h3>
+                      <ul class="flex flex-col gap-2 text-sm font-semibold">
+                        <li class="flex items-center gap-2">
+                          <img src="assets/images/svg/house-type.svg" alt="icon">
+                          <span>4 bedroom houses</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                          <img src="assets/images/svg/price.svg" alt="icon">
+                          <span>Prices from £550,000</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                          <img src="assets/images/svg/address.svg" alt="icon">
+                          <span>Fernhill Heath</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="flex flex-col gap-3.5 px-4 md:px-6 pb-5">
+                    <div class="flex items-center justify-between">
+                      <div class="text-xxs uppercase tracking-link font-semibold">ALL HOMES RESERVED/SOLD</div>
+                      <a class="size-9 rounded-full ring-1 ring-text-100 flex justify-center items-center font-cormorant text-[28px] font-semibold italic" href="javascript:;">i</a>
+                    </div>
+                  </div>
+                </div> 
+
+
+                <!-- Property Card -->
+                <div data-aos="fade-up" data-aos-delay="200" class="bg-surface-10 flex flex-col gap-4">
+                  <div class="grid grid-cols-1 xl:grid-cols-2">
+                    <div class="aspect-[300/205]">
+                      <img class="size-full object-cover" src="assets/images/property/malvern-view.jpg" alt="property">
+                    </div>
+                    <div class="flex flex-col py-3 px-4 md:px-6">
+                      <div class="text-right font-semibold text-sm mb-2">43 miles</div>
+                      <h3 class="border-b border-text-20 font-cormorant pb-1 mb-6">Malvern View</h3>
+                      <ul class="flex flex-col gap-2 text-sm font-semibold">
+                        <li class="flex items-center gap-2">
+                          <img src="assets/images/svg/house-type.svg" alt="icon">
+                          <span>3 & 4 bedroom homes</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                          <img src="assets/images/svg/price.svg" alt="icon">
+                          <span>Prices from £895,000</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                          <img src="assets/images/svg/address.svg" alt="icon">
+                          <span>Inkberrow</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="flex flex-col gap-3.5 px-4 md:px-6 pb-5">
+                    <div class="flex items-center justify-between">
+                      <div class="text-xxs uppercase tracking-link font-semibold">ALL HOMES RESERVED/SOLD</div>
+                      <a class="size-9 rounded-full ring-1 ring-text-100 flex justify-center items-center font-cormorant text-[28px] font-semibold italic" href="javascript:;">i</a>
+                    </div>
+                  </div>
+                </div> 
+              </div>
+            </div>
+
+
+            <div data-aos="fade-in" data-aos-delay="500" class="h-[400px] md:h-svh flex justify-end items-end">
+              <iframe class="max-w-none absolute left-0 md:left-1/2 w-full md:w-1/2 md:h-full object-cover grayscale" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d39129.249731197546!2d-2.2881059882977235!3d52.196541046983455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4870505800bbccd5%3A0xab9aa4f4d0da911c!2sWorcester%2C%20UK!5e0!3m2!1sen!2sin!4v1753346620911!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <div class="px-4 pt-2.5 pb-3 bg-white relative z-30 -mr-2.5 md:-mr-4 lg:-mr-10 mb-2.5">
+                <ul class="flex items-center gap-7 uppercase font-medium text-xxs leading-3 tracking-link">
+                  <li class="flex items-end gap-1">
+                    <img src="assets/images/svg/current.svg" alt="current"/>
+                    <span>current</span>
+                  </li>
+                  <li class="flex items-end gap-1">
+                    <img src="assets/images/svg/past.svg" alt="past"/>
+                    <span>past</span>
+                  </li>
+                  <li class="flex items-end gap-1">
+                    <img src="assets/images/svg/bespoke.svg" alt="bespoke"/>
+                    <span>bespoke</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
      <!-- Footer -->
       <footer class="bg-text-100 pt-12 pb-8">

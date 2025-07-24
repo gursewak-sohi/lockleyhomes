@@ -3,9 +3,12 @@
 @theme {
     --font-sans: "Montserrat", sans-serif;
     --font-cormorant: "Cormorant", serif;
+    --color-text-20: #C9C9C9;
     --color-text-60: #717171;
     --color-text-100: #1A1A1A;
     --color-action-20: #F7FAF0;
+    --color-action-40: #F0F5E2;
+    --color-surface-10: #F9FAF7;
     --color-surface-20: #EFF0EB;
     --text-xxs: 10px;
     --tracking-link: 2px;
@@ -34,6 +37,10 @@ h3, .h3 {
 
 .hovered-links a {
   @apply border-b border-transparent hover:border-text-100 duration-300 py-0.5
+}
+
+html, body, .scrollbar {
+  scrollbar-width: thin;
 }
 
 @media (max-width: 767px) {
