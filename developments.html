@@ -64,109 +64,85 @@
     </header>
 
     
+    <!-- Filter Section -->
+    <section x-data="{ houseTypeOpen: false, bedroomOpen: false, priceOpen: false, houseType: 'House Type', bedroom: 'Bedrooms', price: 'Price' }" 
+         @click.outside="houseTypeOpen = bedroomOpen = priceOpen = false"
+         class="bg-text-100 pt-[154px] md:mt-[-100px] pb-5 text-white text-sm">
+        <div class="max-w-max-width-xl w-full mx-auto px-4 md:px-6 lg:px-12">
+          <div class="grid grid-cols-2">
+            
+            <!-- Left Column -->
+            <div class="flex items-center gap-12 pr-[34px] py-1.5 border-r border-text-60">
+              <div class="flex flex-1">
+                <input type="text" value="Worcestershire, UK" class="text-base border-b border-text-60 focus:outline-none text-white py-1 w-full">
+              </div>
+              <div class="flex items-center gap-5">
+                <div class="">50 miles</div>
+                <button class="cursor-pointer" type="button">
+                  <img src="assets/images/svg/enter.svg" alt="enter"/>
+                </button>
+              </div>
+            </div>
 
-    <!-- Hero Section -->
-     <section class="md:mt-[-100px]">
-        <div class="flex flex-col hero-swiper">
-            <div class="swiper w-full relative group h-svh max-h-96 md:max-h-[700px] lg:max-h-svh">
-                <div class="swiper-wrapper">
-                    <!-- Slides -->
-                    <div class="swiper-slide">
-                        <img  class="object-cover object-top size-full" src="assets/images/banner/slide-1.jpg" />
-                    </div>
-                    <div class="swiper-slide">
-                      <img  class="object-cover object-top size-full" src="assets/images/banner/slide-2.jpg" />
-                    </div>
-                  </div>
-                  <div data-aos="fade-up" data-aos-delay="200" class="w-full flex justify-center absolute z-20 bottom-0 md:bottom-20 lg:bottom-[124px] px-0 md:px-6 lg:px-12">
-                    <div class="bg-action-20/85 max-w-[784px] w-full h-[78px] md:h-[100px] items-center flex justify-center gap-4 md:gap-16 p-5 md:p-[30px]">
-                      <button class="hidden md:flex items-center gap-2.5 cursor-pointer whitespace-nowrap">
-                        <img src="assets/images/svg/pin.svg" alt="pin" />
-                        <span class="tracking-link uppercase text-xxs font-semibold">current location</span>
-                      </button>
-                      <div class="flex-1 flex justify-between gap-4 md:gap-16 items-center">
-                        <input class="w-full text-2xl md:text-[32px] leading-10 font-cormorant text-text-100 placeholder:text-text-100 focus:outline-none" type="text" placeholder="Search by postcode...">
-                        <button type="button" class="btn btn-primary">Search</button>
-                      </div>
-                  </div>
+            <!-- Right Column -->
+            <div class="grid grid-cols-3 relative">
+              <!-- House Type -->
+              <div class="relative">
+                <button @click="houseTypeOpen = !houseTypeOpen; bedroomOpen = priceOpen = false" 
+                        class="w-full cursor-pointer py-2.5 border-r border-text-60">
+                  <span x-text="houseType"></span>
+                </button>
+                <div x-show="houseTypeOpen" x-transition 
+                    class="absolute left-0 w-full bg-white text-black shadow-lg z-10">
+                  <ul>
+                    <li @click="houseType = 'Apartment'; houseTypeOpen = false" class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Apartment</li>
+                    <li @click="houseType = 'Villa'; houseTypeOpen = false" class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Villa</li>
+                    <li @click="houseType = 'Cottage'; houseTypeOpen = false" class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Cottage</li>
+                  </ul>
                 </div>
               </div>
-          </div>
-     </section>
 
-     <!-- Text Section -->
-     <section class="py-14 md:py-20">
-        <div class="max-w-max-width-xl w-full mx-auto px-4 md:px-6 lg:px-12">
-            <div class="flex flex-col items-center text-center max-w-[837px] mx-auto w-full gap-10 md:gap-16">
-                <h2 data-aos="fade-up" class="h3">Lockley Homes is a luxury housebuilder in The Cotswolds, Worcestershire and Warwickshire reputed for ourexacting standards in design.</h2>
-                <div data-aos="fade-up" class="flex justify-center">
-                  <a class="btn btn-primary" href="#">VIEW DEVELOPMENTS</a>
+              <!-- Bedrooms -->
+              <div class="relative">
+                <button @click="bedroomOpen = !bedroomOpen; houseTypeOpen = priceOpen = false" 
+                        class="w-full cursor-pointer py-2.5 border-r border-text-60">
+                  <span x-text="bedroom"></span>
+                </button>
+                <div x-show="bedroomOpen" x-transition 
+                    class="absolute left-0 w-full bg-white text-black shadow-lg z-10">
+                  <ul>
+                    <li @click="bedroom = '1 Bedroom'; bedroomOpen = false" class="px-4 py-2 hover:bg-gray-100 cursor-pointer">1 Bedroom</li>
+                    <li @click="bedroom = '2 Bedrooms'; bedroomOpen = false" class="px-4 py-2 hover:bg-gray-100 cursor-pointer">2 Bedrooms</li>
+                    <li @click="bedroom = '3+ Bedrooms'; bedroomOpen = false" class="px-4 py-2 hover:bg-gray-100 cursor-pointer">3+ Bedrooms</li>
+                  </ul>
                 </div>
+              </div>
+
+              <!-- Price -->
+              <div class="relative">
+                <button @click="priceOpen = !priceOpen; houseTypeOpen = bedroomOpen = false" 
+                        class="w-full cursor-pointer py-2.5">
+                  <span x-text="price"></span>
+                </button>
+                <div x-show="priceOpen" x-transition 
+                    class="absolute left-0 w-full bg-white text-black shadow-lg z-10">
+                  <ul>
+                    <li @click="price = 'Under $500k'; priceOpen = false" class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Under $500k</li>
+                    <li @click="price = '$500k–$1M'; priceOpen = false" class="px-4 py-2 hover:bg-gray-100 cursor-pointer">$500k–$1M</li>
+                    <li @click="price = 'Over $1M'; priceOpen = false" class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Over $1M</li>
+                  </ul>
+                </div>
+              </div>
+
             </div>
+          </div>
         </div>
       </section>
 
-      <!-- Feature Section -->
-     <section class="pb-14 md:pb-20">
-      <div class="max-w-max-width-xl w-full mx-auto px-4 md:px-6 lg:px-12">
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-6">
-            <div data-aos="fade-up" data-aos-delay="200" class="flex flex-col gap-4">
-              <div class="w-full aspect-[406/285] overflow-hidden">
-                <img data-aos="zoom-out" data-aos-delay="200" class="object-cover size-full" src="assets/images/home.jpg" alt="home" />
-              </div>
-              <div class="flex flex-col gap-2">
-                <h3>We are Lockley Homes</h3>
-                <p>We believe in offering affordable luxury, with higher specifications and a more rigorous attention to detail that really sets us apart.</p>
-              </div>
-              <div class="flex justify-start">
-                <a class="btn btn-primary" href="#">Play video</a>
-              </div>
-            </div>
+    
+     
 
-            <div data-aos="fade-up" data-aos-delay="400" class="flex flex-col gap-4">
-              <div class="w-full aspect-[406/285] overflow-hidden">
-                <img data-aos="zoom-out" data-aos-delay="400" class="object-cover size-full" src="assets/images/care.jpg" alt="home" />
-              </div>
-              <div class="flex flex-col gap-2">
-                <h3>Customer care</h3>
-                <p>Our experienced team will continue to deliver a high quality, professional service, even after you have moved into your new home.</p>
-              </div>
-              <div class="flex justify-start">
-                <a class="btn btn-primary" href="#">find out more</a>
-              </div>
-            </div>
-
-            <div data-aos="fade-up" data-aos-delay="600" class="flex flex-col gap-4">
-              <div class="w-full aspect-[406/285] overflow-hidden">
-                <img data-aos="zoom-out" data-aos-delay="600" class="object-cover size-full" src="assets/images/land.jpg" alt="home" />
-              </div>
-              <div class="flex flex-col gap-2">
-                <h3>Land opportunities</h3>
-                <p>We are constantly seeking new sites throughout the Midlands area, in both urban and rural settings.</p>
-              </div>
-              <div class="flex justify-start">
-                <a class="btn btn-primary" href="#">find out more</a>
-              </div>
-            </div>
-          </div>
-      </div>
-    </section>
-
-    <!-- More Section -->
-     <section class="pb-14 md:pb-16">
-        <div class="grid grid-cols-1 md:grid-cols-2">
-            <div class="md:aspect-[687/410] w-full overflow-hidden min-h-full">
-              <img data-aos="zoom-out" class="size-full object-cover min-h-80" src="assets/images/washroom.jpg" alt="washroom" />
-            </div>
-            <div class="w-full bg-surface-20 p-8 md:p-10">
-              <div class="p-8 md:p-10 lg:p-16 h-full justify-center bg-text-60 flex-col flex gap-5 items-center text-center">
-                <span class="font-semibold text-xxs uppercase  text-white tracking-link">LOCKLEY BESPOKE</span>
-                <h3 class="text-white max-w-[400px]">Lorem ipsum dolor sit amet, consectetur elit aliqua.</h3>
-                <a class="btn btn-primary btn-hovered-invert mt-4" href="#">find out more</a>
-              </div>
-            </div>
-        </div>
-     </section>
+    <div class="h-96"></div>
 
      <!-- Footer -->
       <footer class="bg-text-100 pt-12 pb-8">
