@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lockley Homes | Development | Little Acre</title>
+    <link rel="shortcut icon" href="assets/images/svg/favicon.svg" />
+    <!-- Swiper JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- LightBox CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+    <!-- Main CSS -->
+    <link href="./assets/css/style.css" rel="stylesheet" />
+    
+</head>
+
+<body class="font-sans text-base antialiased text-text-100 pt-[72px] md:pt-[100px]">
+    <!-- Header -->
+    <header x-data="{ open: false }" class="relative z-30">
+      <div data-aos="fade-down" data-aos-delay="200" class="aos-desktop-only bg-white fixed w-full top-0 shadow-header z-30">
+        <div class="max-w-max-width-xl w-full mx-auto px-4 md:px-6 lg:px-12">
+          <div class="flex justify-between py-4 md:py-[30px] items-center">
+              <a href="index.html">
+                <img src="assets/images/svg/logo.svg" alt="logo" />
+              </a>
+              <ul class="flex items-center gap-[58px] uppercase font-semibold text-xxs leading-3 tracking-link hovered-links">
+                <li class="hidden md:block">
+                  <a href="#">Find your home</a>
+                </li>
+                <li class="hidden md:block">
+                  <a href="#">Customer care</a>
+                </li>
+                <li>
+                  <button @click.stop="open = !open" class="size-8 cursor-pointer flex items-center justify-center" type="button">
+                      <img src="assets/images/svg/menu.svg" alt="menu" />
+                  </button>
+                </li>
+              </ul>
+          </div>
+        </div>
+      </div>
+      <div class="max-w-max-width-xl w-full z-20 flex justify-end fixed left-1/2 -translate-x-1/2">
+        <div @click.away="open = false" :class="open ? 'h-[482px] md:h-[384px]' : 'h-0'" class="shadow-xl w-full max-w-full md:max-w-[283px] bg-white top-[100px] right-0 overflow-hidden duration-300">
+          <ul class="flex flex-col uppercase font-semibold text-xxs leading-3 tracking-link">
+            <li class="border-b border-text-60/20 block md:hidden">
+              <a class="px-8 md:px-12 py-7 md:py-8 block hover:bg-surface-20 duration-300" href="#">Find your home</a>
+            </li>
+            <li class="border-b border-text-60/20 block md:hidden">
+              <a class="px-8 md:px-12 py-7 md:py-8 block hover:bg-surface-20 duration-300" href="#">Customer care</a>
+            </li>
+            <li class="border-b border-text-60/20">
+              <a class="px-8 md:px-12 py-7 md:py-8 block hover:bg-surface-20 duration-300" href="#">Bespoke homes</a>
+            </li>
+            <li class="border-b border-text-60/20">
+              <a class="px-8 md:px-12 py-7 md:py-8 block hover:bg-surface-20 duration-300" href="#">About Us</a>
+            </li>
+            <li class="border-b border-text-60/20">
+              <a class="px-8 md:px-12 py-7 md:py-8 block hover:bg-surface-20 duration-300" href="#">Land</a>
+            </li>
+            <li class="border-b border-text-60/20">
+              <a class="px-8 md:px-12 py-7 md:py-8 block hover:bg-surface-20 duration-300" href="#">Latest News</a>
+            </li>
+            <li class="">
+              <a class="px-8 md:px-12 py-7 md:py-8 block hover:bg-surface-20 duration-300" href="#">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <!-- Property Details Section -->
+     <section class="bg-action-20 mt-[-100px] pt-[100px]">
+      <div class="max-w-max-width-xl w-full mx-auto">
+        <div class="flex flex-col md:flex-row w-full">
+          <div  class="w-full md:w-[65%] relative">
+            <div class="property-details-swiper aspect-[9/6] md:aspect-auto md:h-[600px] md:-ml-[max(calc((100vw-1366px)/2),0px)]">
+              <div class="swiper h-full">
+                  <div class="swiper-wrapper">
+                      <!-- Slides -->
+                      <div class="swiper-slide">
+                          <img data-aos="zoom-out" data-aos-delay="700" class="object-cover size-full" src="assets/images/property/little-acre.jpg" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img data-aos="fade-in" data-aos-delay="700" class="object-cover size-full" src="assets/images/property/britannia-gardens.jpg" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img data-aos="fade-in" data-aos-delay="700" class="object-cover size-full" src="assets/images/property/malvern-view.jpg" />
+                      </div>
+                    </div>
+                    <div data-aos="fade-in" data-aos-delay="800" class="swiper-button-next !w-8 bg-text-100 after:!text-sm rounded-full active:scale-95"></div>
+                    <div data-aos="fade-in" data-aos-delay="800" class="swiper-button-prev !w-8 bg-text-100 after:!text-sm rounded-full active:scale-95"></div>
+                </div>
+            </div>
+          </div>
+          <div class="bg-action-20 flex justify-center px-4 md:px-6 lg:px-12 py-10 md:py-[60px] w-full md:w-[35%]">
+            <div class="max-w-[315px] w-full flex flex-col gap-14">
+              <div class="flex flex-col items-center gap-7">
+                <img data-aos="fade-up" data-aos-delay="700" width="192" height="108" src="assets/images/svg/little-acre-logo.svg" alt="logo"/>
+                <div data-aos="fade-up" data-aos-delay="750" class="font-normal text-sm uppercase">CALL NOW <a href="tel:01905691048" class="font-semibold">01905 691 048</a></div>
+                <ul data-aos="fade-up" data-aos-delay="800" class="flex flex-col gap-2 text-sm font-semibold">
+                  <li class="flex items-center gap-2">
+                    <img src="assets/images/svg/house-type-dark.svg" alt="icon">
+                    <span>Two luxury detached 4 bedroom homes</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <img src="assets/images/svg/price-dark.svg" alt="icon">
+                    <span>Prices from £1,150,000</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <img src="assets/images/svg/pin-dark.svg" alt="icon">
+                    <span>Lower Broadheath, Worcestershire</span>
+                  </li>
+                </ul>
+              </div>
+              <div data-aos="fade-up" data-aos-delay="850" class="flex flex-col gap-[18px]">
+                <div class="grid grid-cols-2 gap-3.5">
+                  <a href="javascript:;" class="btn btn-theme">directions</a>
+                  <a href="javascript:;" class="btn btn-primary-outline">viewing</a>
+                </div>
+                <div class="px-5 flex justify-center">
+                  <div class="h-px w-full bg-text-20"></div>
+                </div>
+                <div class="grid gap-3.5">
+                  <button type="button" class="btn btn-primary">register interest</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+     </section>
+
+     <!-- Navigation Bar Section -->
+     <section class="bg-text-100 sticky top-[72px] md:top-[100px] z-20">
+        <div class="max-w-max-width-xl w-full mx-auto px-4 md:px-6 lg:px-12">
+            <ul data-aos="fade-in" data-aos-delay="700" class="flex items-center md:justify-center overflow-auto gap-8 md:gap-10 uppercase font-semibold text-white text-xxs leading-3 tracking-link whitespace-nowrap">
+              <li><a class="py-4 block" href="#overview">Overview</a></li>
+              <li><a class="py-4 block" href="#site-plan">Site plan</a></li>
+              <li><a class="py-4 block" href="#availability">Availability</a></li>
+              <li><a class="py-4 block" href="#location">Location</a></li>
+              <li><a class="py-4 block" href="#register">Register</a></li>
+            </ul>
+        </div>
+     </section>
+
+     <!-- Overview Section -->
+    <section class="py-6 relative">
+      <!-- Reference Scroll View -->
+      <div id="overview" class="absolute left-0 top-[-116px] md:top-[-144px] invisible opacity-0"></div>
+      <div class="max-w-max-width-xl w-full mx-auto px-4 md:px-6 lg:px-12">
+        <div class="flex flex-col gap-[18px]">
+          <ul data-aos="fade-up" class="flex items-center gap-2 text-xs leading-4">
+            <li><a href="index.html">Home</a></li>
+            <li>></li>
+            <li><a href="developments.html">Developments</a></li>
+            <li>></li>
+            <li class="underline">Little Acre</li>
+          </ul>
+          <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-8 md:gap-12">
+            <div class="flex flex-col gap-6">
+              <h1 data-aos="fade-up">Little Acre</h1>
+              <div data-aos="fade-up" class="flex flex-col gap-4">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo.</p>
+              </div>
+            </div>
+            <div class="bg-surface-20 p-8 md:p-10 text-white min-h-[440px] flex">
+              <div data-aos="fade-up" class="bg-text-100 py-8 px-8 md:px-10 flex flex-col gap-7 flex-1">
+                <h3>Key features</h3>
+                <ul class="text-sm leading-5 font-semibold list-disc pl-4 flex flex-col gap-5">
+                  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt et dolore.</li>
+                  <li>Ut enim ad minim veniam, quis nostrud.</li>
+                  <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</li>
+                  <li>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+     <!-- Site Plan Section -->
+     <section x-data="{ show: true }" class="py-6 relative">
+      <!-- Reference Scroll View -->
+      <div id="site-plan" class="absolute left-0 top-[-116px] md:top-[-144px] invisible opacity-0"></div>
+      <div class="max-w-max-width-xl w-full mx-auto px-4 md:px-6 lg:px-12">
+         <div x-data="zoomableImage()" class="relative bg-surface-10 overflow-hidden">
+          <!-- Property Card -->
+          <div data-aos="fade-up" :class="show ? 'visible opacity-100 flex' : 'invisible opacity-0 hidden md:flex'" class="bg-action-40 duration-300 flex flex-col gap-4 max-w-full md:max-w-[600px] md:absolute left-0 top-0 xl:top-24 z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2">
+              <div class="aspect-[300/205]">
+                <img class="size-full object-cover" src="assets/images/property/little-acre-plot-1.jpg" alt="property">
+              </div>
+              <div class="flex flex-col py-3 px-4 md:px-6">
+                <div class="flex justify-end mb-2">
+                  <button @click="show = false" type="button" class="cursor-pointer -mr-2">
+                    <img src="assets/images/svg/close.svg" alt="">
+                  </button>
+                </div>
+                <h3 class="border-b border-text-20 font-cormorant pb-1 mb-6">Plot One</h3>
+                <ul class="flex flex-col gap-2 text-sm font-semibold">
+                  <li class="flex items-center gap-2">
+                    <img src="assets/images/svg/house-type.svg" alt="icon">
+                    <span>Detached house</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <img src="assets/images/svg/price.svg" alt="icon">
+                    <span>£1,150,000</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <img src="assets/images/svg/address.svg" alt="icon">
+                    <span>4 bedrooms, 3 bathrooms</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="flex flex-col gap-3.5 px-4 md:px-6 pb-5">
+              <div class="flex items-center justify-between">
+                <div class="text-xxs uppercase tracking-link font-semibold">available now</div>
+                <button type="button" class="btn btn-primary-outline">email details</button>
+              </div>
+              <p class="text-sm leading-5">Dignissim cursus nulla fermentum eu vitae placerat diam. Fringilla sam dui posuere libero, tincidunt massa porttitor eu integer. Mauris el volutpat nunc pretium volut pat donec morbi ultrices mi commodo.</p>
+            </div>
+          </div>
+
+            <div class="relative overflow-hidden">
+              <img @click="show = true" id="sitePlanImage" :style="`transform: scale(${scale}); transform-origin: center center; transition: transform 0.3s ease;`" src="assets/images/little-acre-site-plan.jpg" alt="site plan">
+            </div>
+            <div class="bg-gradient-to-r to-surface-20/50 w-full absolute bottom-0 left-0 right-0 h-14 md:h-[88px] flex items-center justify-end px-4 md:px-12">
+              <div class="flex items-center gap-3">
+                <button @click="zoomIn" class="flex items-center justify-center size-8 md:size-10 bg-text-100 rounded-full cursor-pointer active:scale-95" type="button">
+                  <img class="scale-75 md:scale-100" src="assets/images/svg/plus.svg" alt="zoom in">
+                </button>
+                <button @click="zoomOut" class="flex items-center justify-center size-8 md:size-10 bg-text-100 rounded-full cursor-pointer active:scale-95" type="button">
+                  <img class="scale-75 md:scale-100" src="assets/images/svg/minus.svg" alt="zoom out">
+                </button>
+              </div>
+            </div>
+         </div>
+      </div>
+    </section>
+
+    <!-- Availability Section -->
+    <section class="relative py-14 md:py-20">
+       <!-- Reference Scroll View -->
+       <div id="availability" class="absolute left-0 top-[-116px] md:top-[-144px] invisible opacity-0"></div>
+       <div class="max-w-max-width-xl w-full mx-auto px-4 md:px-6 lg:px-12">
+          <div class="flex flex-col gap-10">
+              <h2 data-aos="fade-up">Availability</h2>
+              <div class="overflow-x-auto">
+                <table data-aos="fade-up" class="w-full whitespace-nowrap">
+                  <thead>
+                    <tr class="text-left">
+                      <th class="font-semibold px-2 border-b border-text-100 pb-[18px]">Plot</th>
+                      <th class="font-semibold px-2 border-b border-text-100 pb-[18px]">Type</th>
+                      <th class="font-semibold px-2 border-b border-text-100 pb-[18px]">Bedrooms</th>
+                      <th class="font-semibold px-2 border-b border-text-100 pb-[18px]">Bathrooms</th>
+                      <th class="font-semibold px-2 border-b border-text-100 pb-[18px]">Availability</th>
+                      <th class="font-semibold px-2 border-b border-text-100 pb-[18px]"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="px-2 border-b border-text-100 py-3">Plot 1</td>
+                      <td class="px-2 border-b border-text-100 py-3">Detached house</td>
+                      <td class="px-2 border-b border-text-100 py-3">4 bedrooms</td>
+                      <td class="px-2 border-b border-text-100 py-3">3 bathrooms</td>
+                      <td class="px-2 border-b border-text-100 py-3">£1,150,000</td>
+                      <td class="px-2 border-b border-text-100 py-3">
+                        <div class="flex justify-end">
+                          <a class="flex items-center gap-[18px] text-xxs uppercase tracking-link leading-3 font-semibold" href="javascript:;"><img src="assets/images/svg/view.svg">View</a>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="px-2 border-b border-text-100 py-3">Plot 2</td>
+                      <td class="px-2 border-b border-text-100 py-3">Detached house</td>
+                      <td class="px-2 border-b border-text-100 py-3">4 bedrooms</td>
+                      <td class="px-2 border-b border-text-100 py-3">3 bathrooms</td>
+                      <td class="px-2 border-b border-text-100 py-3">Sold</td>
+                      <td class="px-2 border-b border-text-100 py-3">
+                        <div class="flex justify-end">
+                          <a class="flex items-center gap-[18px] text-xxs uppercase tracking-link leading-3 font-semibold" href="javascript:;"><img src="assets/images/svg/view.svg">View</a>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+          </div>
+       </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="relative py-12 md:py-16 bg-surface-10">
+      <!-- Reference Scroll View -->
+      <div id="location" class="absolute left-0 top-[-116px] md:top-[-144px] invisible opacity-0"></div>
+      <div class="max-w-max-width-xl w-full mx-auto px-4 md:px-6 lg:px-12">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-12 items-center">
+          <div class="flex flex-col">
+            <h2 data-aos="fade-up">Location</h2>
+            <p data-aos="fade-up" class="text-2xl leading-8 tracking-tight font-cormorant mt-4">Duis aute irure dolor in reprehend erit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.</p>
+            <div data-aos="fade-up" class="mt-8 md:mt-16 grid grid-cols-2 gap-x-8 gap-y-5">
+              <button type="button" class="btn btn-primary-outine">location</button>
+              <button type="button" class="btn btn-theme">Amenities</button>
+              <button type="button" class="btn btn-theme">Leisure</button>
+              <button type="button" class="btn btn-theme">Education</button>
+            </div>
+          </div>
+          <div data-aos="fade-up" class="flex flex-col gap-4">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.</p>
+          </div>
+          <div data-aos="fade-up" class="md:h-[415px] w-full aspect-[496/415] md:aspect-auto">
+            <img class="size-full object-cover" src="assets/images/property/little-acre-location.jpg" alt="location">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Register section -->
+    <section class="relative py-16 md:py-24">
+      <!-- Reference Scroll View -->
+      <div id="register" class="absolute left-0 top-[-116px] md:top-[-144px] invisible opacity-0"></div>
+      <div class="max-w-max-width-xl w-full mx-auto px-4 md:px-6 lg:px-12">
+        <div class="grid lg:grid-cols-[1fr_310px] items-center gap-10 xl:gap-40 max-w-[315px] lg:max-w-none mx-auto lg:mx-0">
+          <div class="flex flex-col lg:flex-row  items-center gap-7 md:gap-10 xl:gap-24">
+            <img data-aos="fade-up" class="w-[192px] md:w-[275px]" width="275" height="155" src="assets/images/svg/little-acre-logo.svg" alt="logo"/>
+            <div class="flex flex-col gap-8 items-center lg:items-start">
+            <div data-aos="fade-up" class="font-normal text-sm uppercase">CALL NOW <a href="tel:01905691048" class="font-semibold">01905 691 048</a></div>
+              <ul data-aos="fade-up" class="flex flex-col gap-2 text-sm font-semibold">
+                <li class="flex items-center gap-2">
+                  <img src="assets/images/svg/house-type-dark.svg" alt="icon">
+                  <span>Two luxury detached 4 bedroom homes</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <img src="assets/images/svg/price-dark.svg" alt="icon">
+                  <span>Prices from £1,150,000</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <img src="assets/images/svg/pin-dark.svg" alt="icon">
+                  <span>Lower Broadheath, Worcestershire</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="flex flex-col gap-[18px]">
+            <div data-aos="fade-up" class="grid grid-cols-2 gap-3.5">
+              <a href="javascript:;" class="btn btn-theme">directions</a>
+              <a href="javascript:;" class="btn btn-primary-outline">viewing</a>
+            </div>
+            <div data-aos="fade-up" class="px-5 flex justify-center">
+              <div class="h-px w-full bg-text-20"></div>
+            </div>
+            <div data-aos="fade-up" class="grid gap-3.5">
+              <button type="button" class="btn btn-primary">register interest</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+   
+     <!-- Footer -->
+      <footer class="bg-text-100 pt-12 pb-8">
+          <div class="max-w-max-width-xl w-full mx-auto px-4 md:px-6 lg:px-12">
+              <div class="flex flex-col gap-10 md:gap-7">
+                  <div class="flex flex-col items-center md:items-stretch md:flex-row justify-between gap-8 lg:gap-16">
+                    <div class="flex flex-col items-center md:items-start text-center md:text-start gap-8 md:gap-14 justify-between max-w-[410px] md:pb-5">
+                        <a href="index.html">
+                          <img src="assets/images/svg/logo-white.svg" alt="logo" />
+                        </a>
+                        <h6 class="text-lg leading-6 font-cormorant tracking-tight text-white">At Lockley Homes, we pride ourselves on creating desirable homes in the most sought-after locations throughout The Cotswolds, Worcestershire and Warwickshire.</h6>
+                    </div>
+                     
+                    <div class="flex flex-col md:flex-row gap-8 md:gap-16 shrink-0 text-center md:text-start">
+                      <ul class="text-xxs tracking-link leading-6 text-white uppercase hovered-links">
+                          <li class="font-semibold"><a href="#">Find your home</a></li>
+                          <li class="font-semibold"><a href="#">View all developments</a></li>
+                          <li>&nbsp;</li>
+                          <li><a href="#">homes in the cotswolds</a></li>
+                          <li><a href="#">homes in worcestershire</a></li>
+                          <li><a href="#">homes in warwickshire</a></li>
+                      </ul>
+                      <div class="flex flex-col md:items-start gap-8 md:gap-12">
+                        <ul class="text-xxs tracking-link leading-6 text-white uppercase hovered-links">
+                          <li><a href="#">About us</a></li>
+                          <li><a href="#">lockley Bespoke</a></li>
+                          <li><a href="#">customer care</a></li>
+                          <li><a href="#">customer charter</a></li>
+                          <li><a href="#">aftercare service</a></li>
+                          <li><a href="#">Land required</a></li>
+                          <li><a href="#">latest news</a></li>
+                          <li><a href="#">contact us</a></li>
+                      </ul>
+                      <ul class="flex self-center md:self-auto items-center gap-[18px]">
+                        <li>
+                          <a target="_blank" href="https://www.youtube.com/channel/UCzdjjKEo1BINeWM7WE_uqWg">
+                            <img src="assets/images/svg/youtube.svg" alt="youtube" />
+                          </a>
+                        </li>
+                        <li>
+                          <a target="_blank" href="https://www.facebook.com/lockleyhomes">
+                            <img src="assets/images/svg/facebook.svg" alt="facebook" />
+                          </a>
+                        </li>
+                        <li>
+                          <a target="_blank" href="https://instagram.com/lockleyhomes">
+                            <img src="assets/images/svg/instagram.svg" alt="instagram" />
+                          </a>
+                        </li>
+                      </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <ul class="flex flex-col md:flex-row items-center gap-4 md:gap-10 text-white text-xs">
+                    <li class="order-1 md:order-0">© 2025 Lockley Homes. All rights reserved.</li>
+                    <li><a target="_blank" href="#">Privacy policy</a></li>
+                    <li><a target="_blank" href="#">Site by TaylorGodley</a></li>
+                  </ul>
+              </div>
+          </div>
+      </footer>
+</body>
+
+ <!-- Apline JS -->
+ <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<!-- LightBox JS -->
+<script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+<!-- Main JS -->
+<script type="text/javascript" src="assets/js/main.js"></script>
+
+<!-- Alpine Site Zoom In/Out -->
+<script>
+  function zoomableImage() {
+    return {
+      scale: 1,
+      minScale: 1,
+      maxScale: 3,
+      step: 0.1,
+      zoomIn() {
+        if (this.scale < this.maxScale) this.scale += this.step;
+      },
+      zoomOut() {
+        if (this.scale > this.minScale) this.scale -= this.step;
+      }
+    }
+  }
+</script>
+</html>
