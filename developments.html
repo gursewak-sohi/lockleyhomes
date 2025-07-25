@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <!-- AOS CSS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- LightBox CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
     <!-- Main CSS -->
     <link href="./assets/css/style.css" rel="stylesheet" />
     
@@ -166,11 +168,11 @@
      <!-- Property Listing -->
       <section class="pb-14 md:pb-0">
         <div class="max-w-max-width-xl w-full mx-auto px-4 md:px-6 lg:px-12">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-0">
+          <div class="grid grid-cols-1 md:grid-cols-2">
             <div class="py-8 md:py-10 md:pr-[34px] md:h-svh overflow-hidden hover:overflow-auto scrollbar">
-              <div class="flex flex-col gap-5">
+              <div id="listings" class="flex flex-col gap-5">
                 <!-- Property Card -->
-                <div data-aos="fade-up" data-aos-delay="500" class="bg-action-40 flex flex-col gap-4">
+                <div data-id="0" data-aos="fade-up" data-aos-delay="500" class="listing bg-surface-10 flex flex-col gap-4">
                   <div class="grid grid-cols-1 xl:grid-cols-2">
                     <div class="aspect-[300/205]">
                       <img class="size-full object-cover" src="assets/images/property/little-acre.jpg" alt="property">
@@ -204,7 +206,7 @@
                 </div>    
 
                 <!-- Property Card -->
-                <div data-aos="fade-up" data-aos-delay="700" class="bg-surface-10 flex flex-col gap-4">
+                <div data-id="1" data-aos="fade-up" data-aos-delay="700" class="listing bg-surface-10 flex flex-col gap-4">
                   <div class="grid grid-cols-1 xl:grid-cols-2">
                     <div class="aspect-[300/205]">
                       <img class="size-full object-cover" src="assets/images/property/britannia-gardens.jpg" alt="property">
@@ -236,9 +238,8 @@
                   </div>
                 </div> 
 
-
                 <!-- Property Card -->
-                <div data-aos="fade-up" data-aos-delay="200" class="bg-surface-10 flex flex-col gap-4">
+                <div data-id="2" data-aos="fade-up" data-aos-delay="200" class="listing bg-surface-10 flex flex-col gap-4">
                   <div class="grid grid-cols-1 xl:grid-cols-2">
                     <div class="aspect-[300/205]">
                       <img class="size-full object-cover" src="assets/images/property/malvern-view.jpg" alt="property">
@@ -273,16 +274,18 @@
             </div>
 
 
-            <div data-aos="fade-in" data-aos-delay="500" class="h-[400px] md:h-svh flex justify-end items-end">
-              <iframe class="max-w-none absolute left-0 md:left-1/2 w-full md:w-1/2 md:h-full object-cover grayscale" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d39129.249731197546!2d-2.2881059882977235!3d52.196541046983455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4870505800bbccd5%3A0xab9aa4f4d0da911c!2sWorcester%2C%20UK!5e0!3m2!1sen!2sin!4v1753346620911!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-              <div class="px-4 pt-2.5 pb-3 bg-white relative z-30 -mr-2.5 md:-mr-4 lg:-mr-10 mb-2.5">
+            <div data-aos="fade-in" data-aos-delay="500" class="h-[400px] md:h-svh md:flex justify-end items-end">
+              <!-- Map -->
+              <div id="map" class="max-w-none md:absolute left-0 md:left-1/2 w-full md:w-1/2 h-full object-cover"></div>
+
+              <div class="px-4 pt-2.5 pb-3 bg-white relative z-30 mr-0 md:-mr-4 lg:-mr-10 mb-2.5 flex justify-end">
                 <ul class="flex items-center gap-7 uppercase font-medium text-xxs leading-3 tracking-link">
                   <li class="flex items-end gap-1">
-                    <img src="assets/images/svg/current.svg" alt="current"/>
+                    <img src="assets/images/svg/current-pin.svg" alt="current"/>
                     <span>current</span>
                   </li>
                   <li class="flex items-end gap-1">
-                    <img src="assets/images/svg/past.svg" alt="past"/>
+                    <img src="assets/images/svg/past-pin.svg" alt="past"/>
                     <span>past</span>
                   </li>
                   <li class="flex items-end gap-1">
@@ -364,7 +367,194 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 <!-- AOS JS -->
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<!-- LightBox JS -->
+<script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+<!-- Google Map API -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArl-sXmGAdwh_8HlLE2v1uzkgNV82trsk&callback=initMap" async defer></script>
 <!-- Main JS -->
 <script type="text/javascript" src="assets/js/main.js"></script>
 
+<!-- Map Script  -->
+<script>
+  let map;
+  const locations = [
+    {
+      title: 'Little Acre',
+      lat: 52.20300,
+      lng: -2.28408,
+      icon: 'assets/images/svg/current-pin.svg',
+      iconSelected: 'assets/images/svg/selected-current-pin.svg',
+    },
+    {
+      title: 'Britannia Gardens',
+      lat: 52.230262,
+      lng: -2.1889747,
+      icon: 'assets/images/svg/past-pin.svg',
+      iconSelected: 'assets/images/svg/selected-past-pin.svg',
+    },
+    {
+      title: 'Malvern View',
+      lat: 52.209987,
+      lng: -1.9884813,
+      icon: 'assets/images/svg/bespoke-pin.svg',
+      iconSelected: 'assets/images/svg/selected-bespoke-pin.svg',
+    }
+  ];
+  const markers = [];
+  
+
+  function initMap() {
+    map = new google.maps.Map(document.getElementById("map"), {
+      center: { lat: 52.209, lng: -2.15 },
+      zoom: 11,
+      styles: [
+        {
+          elementType: "geometry",
+          stylers: [{ color: "#f5f5f5" }]
+        },
+        {
+          elementType: "labels.icon",
+          stylers: [{ visibility: "off" }]
+        },
+        {
+          elementType: "labels.text.fill",
+          stylers: [{ color: "#616161" }]
+        },
+        {
+          elementType: "labels.text.stroke",
+          stylers: [{ color: "#f5f5f5" }]
+        },
+        {
+          featureType: "administrative.land_parcel",
+          elementType: "labels.text.fill",
+          stylers: [{ color: "#bdbdbd" }]
+        },
+        {
+          featureType: "poi",
+          elementType: "geometry",
+          stylers: [{ color: "#eeeeee" }]
+        },
+        {
+          featureType: "poi",
+          elementType: "labels.text.fill",
+          stylers: [{ color: "#757575" }]
+        },
+        {
+          featureType: "poi.park",
+          elementType: "geometry",
+          stylers: [{ color: "#e5e5e5" }]
+        },
+        {
+          featureType: "poi.park",
+          elementType: "labels.text.fill",
+          stylers: [{ color: "#9e9e9e" }]
+        },
+        {
+          featureType: "road",
+          elementType: "geometry",
+          stylers: [{ color: "#ffffff" }]
+        },
+        {
+          featureType: "road.arterial",
+          elementType: "labels.text.fill",
+          stylers: [{ color: "#757575" }]
+        },
+        {
+          featureType: "road.highway",
+          elementType: "geometry",
+          stylers: [{ color: "#dadada" }]
+        },
+        {
+          featureType: "road.highway",
+          elementType: "labels.text.fill",
+          stylers: [{ color: "#616161" }]
+        },
+        {
+          featureType: "road.local",
+          elementType: "labels.text.fill",
+          stylers: [{ color: "#9e9e9e" }]
+        },
+        {
+          featureType: "transit.line",
+          elementType: "geometry",
+          stylers: [{ color: "#e5e5e5" }]
+        },
+        {
+          featureType: "transit.station",
+          elementType: "geometry",
+          stylers: [{ color: "#eeeeee" }]
+        },
+        {
+          featureType: "water",
+          elementType: "geometry",
+          stylers: [{ color: "#c9c9c9" }]
+        },
+        {
+          featureType: "water",
+          elementType: "labels.text.fill",
+          stylers: [{ color: "#9e9e9e" }]
+        }
+      ]
+    });
+
+    const bounds = new google.maps.LatLngBounds();
+
+    locations.forEach((location, index) => {
+      const marker = new google.maps.Marker({
+        position: { lat: location.lat, lng: location.lng },
+        map,
+        title: location.title,
+        icon: {
+          url: location.icon,
+          scaledSize: new google.maps.Size(65, 65),
+        },
+      });
+
+      marker.addListener("click", () => {
+        highlightListing(index);
+      });
+
+      markers.push(marker);
+      bounds.extend(marker.position);
+    });
+
+    map.fitBounds(bounds);
+  }
+
+  function highlightListing(index) {
+      const all = document.querySelectorAll(".listing");
+      all.forEach(el => {
+        el.classList.remove("bg-action-40");
+        el.classList.add("bg-surface-10");
+      });
+
+      if (index !== null && index !== undefined) {
+        const el = document.querySelector(`.listing[data-id="${index}"]`);
+        if (el) {
+          el.classList.remove("bg-surface-10");
+          el.classList.add("bg-action-40");
+          el.scrollIntoView({ behavior: "smooth", block: "center" });
+        }
+
+        markers.forEach((marker, i) => {
+          marker.setIcon({
+            url: i == index ? locations[i].iconSelected : locations[i].icon,
+            scaledSize: new google.maps.Size(65, 65),
+          });
+        });
+      }
+    }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".listing").forEach(el => {
+      el.addEventListener("click", () => {
+        const id = el.getAttribute("data-id");
+        const marker = markers[id];
+        map.setCenter(marker.getPosition());
+        map.setZoom(14);
+        highlightListing(id);
+      });
+    });
+  });
+</script>
 </html>

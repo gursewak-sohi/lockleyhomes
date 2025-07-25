@@ -3,6 +3,9 @@
   // JS Loaded
   let body = document.body;
   body.classList.add('js-loaded');
+
+  // LightBox Init
+  const lightbox = GLightbox();  
  
   // AOS Init
   AOS.init({
@@ -27,7 +30,8 @@
           loop: true
       });
   });
- 
+
+  
 
 
 })();
