@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lockley Homes | Development | Little Acre</title>
+    <link rel="shortcut icon" href="assets/images/svg/favicon.svg" />
+    <!-- Swiper JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- LightBox CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+    <!-- Main CSS -->
+    <link href="./assets/css/style.css" rel="stylesheet" />
+    
+</head>
+
+<body class="font-sans text-base antialiased text-text-100 pt-[72px] md:pt-[100px]">
+    <!-- Header -->
+    <header x-data="{ open: false }" class="relative z-30">
+      <div data-aos="fade-down" data-aos-delay="200" class="aos-desktop-only bg-white fixed w-full top-0 shadow-header z-30">
+        <div class="max-w-max-width-xl w-full mx-auto px-4 md:px-6 lg:px-12">
+          <div class="flex justify-between py-4 md:py-[30px] items-center">
+              <a href="index.html">
+                <img src="assets/images/svg/logo.svg" alt="logo" />
+              </a>
+              <ul class="flex items-center gap-[58px] uppercase font-semibold text-xxs leading-3 tracking-link hovered-links">
+                <li class="hidden md:block">
+                  <a href="#">Find your home</a>
+                </li>
+                <li class="hidden md:block">
+                  <a href="#">Customer care</a>
+                </li>
+                <li>
+                  <button @click.stop="open = !open" class="size-8 cursor-pointer flex items-center justify-center" type="button">
+                      <img src="assets/images/svg/menu.svg" alt="menu" />
+                  </button>
+                </li>
+              </ul>
+          </div>
+        </div>
+      </div>
+      <div class="max-w-max-width-xl w-full z-20 flex justify-end fixed left-1/2 -translate-x-1/2">
+        <div @click.away="open = false" :class="open ? 'h-[482px] md:h-[384px]' : 'h-0'" class="shadow-xl w-full max-w-full md:max-w-[283px] bg-white top-[100px] right-0 overflow-hidden duration-300">
+          <ul class="flex flex-col uppercase font-semibold text-xxs leading-3 tracking-link">
+            <li class="border-b border-text-60/20 block md:hidden">
+              <a class="px-8 md:px-12 py-7 md:py-8 block hover:bg-surface-20 duration-300" href="#">Find your home</a>
+            </li>
+            <li class="border-b border-text-60/20 block md:hidden">
+              <a class="px-8 md:px-12 py-7 md:py-8 block hover:bg-surface-20 duration-300" href="#">Customer care</a>
+            </li>
+            <li class="border-b border-text-60/20">
+              <a class="px-8 md:px-12 py-7 md:py-8 block hover:bg-surface-20 duration-300" href="#">Bespoke homes</a>
+            </li>
+            <li class="border-b border-text-60/20">
+              <a class="px-8 md:px-12 py-7 md:py-8 block hover:bg-surface-20 duration-300" href="#">About Us</a>
+            </li>
+            <li class="border-b border-text-60/20">
+              <a class="px-8 md:px-12 py-7 md:py-8 block hover:bg-surface-20 duration-300" href="#">Land</a>
+            </li>
+            <li class="border-b border-text-60/20">
+              <a class="px-8 md:px-12 py-7 md:py-8 block hover:bg-surface-20 duration-300" href="#">Latest News</a>
+            </li>
+            <li class="">
+              <a class="px-8 md:px-12 py-7 md:py-8 block hover:bg-surface-20 duration-300" href="#">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <!-- Plot Details Section -->
+     <section class="bg-action-20 mt-[-100px] pt-[100px]">
+      <div class="max-w-max-width-xl w-full mx-auto">
+        <div class="flex flex-col-reverse lg:flex-row w-full">
+          <div class="bg-action-20 flex px-4 md:pl-6 lg:pl-12 lg:pr-7 py-10 lg:py-14 w-full lg:w-[35%]">
+            <div class="w-full flex flex-col gap-8 md:gap-4 lg:gap-16">
+              <ul data-aos="fade-up" data-aos-delay="700" class="flex flex-wrap items-center gap-2 text-xs leading-4 whitespace-nowrap">
+                <li><a href="index.html">Home</a></li>
+                <li>></li>
+                <li><a href="developments.html">Developments</a></li>
+                <li>></li>
+                <li><a href="little-acre.html">Little Acre</a></li>
+                <li>></li>
+                <li class="underline">Plot 1</li>
+              </ul>
+              <div class="flex flex-col gap-4 mt-auto">
+                <h1 data-aos="fade-up" data-aos-delay="750">Plot One</h1>
+                <ul data-aos="fade-up" data-aos-delay="800" class="flex flex-col gap-2 text-sm font-semibold">
+                  <li class="flex items-center gap-2">
+                    <img src="assets/images/svg/house-type-dark.svg" alt="icon">
+                    <span>4 bedroom</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <img src="assets/images/svg/price-dark.svg" alt="icon">
+                    <span>£1,150,000</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <img src="assets/images/svg/pin-dark.svg" alt="icon">
+                    <span>Lower Broadheath, Worcestershiree</span>
+                  </li>
+                </ul>
+              </div>
+              <h3 data-aos="fade-up" data-aos-delay="850">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do ut labore et dolore.</h3>
+            </div>
+          </div>
+          <div  class="w-full lg:w-[65%] relative">
+            <div class="property-details-swiper aspect-[9/6] md:aspect-auto md:h-[600px] md:-mr-[max(calc((100vw-1366px)/2),0px)]">
+              <div class="swiper h-full">
+                  <div class="swiper-wrapper">
+                      <!-- Slides -->
+                      <div class="swiper-slide">
+                          <img data-aos="zoom-out" data-aos-delay="700" class="object-cover size-full" src="assets/images/property/little-acre.jpg" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img data-aos="fade-in" data-aos-delay="700" class="object-cover size-full" src="assets/images/property/britannia-gardens.jpg" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img data-aos="fade-in" data-aos-delay="700" class="object-cover size-full" src="assets/images/property/malvern-view.jpg" />
+                      </div>
+                    </div>
+                    <div data-aos="fade-in" data-aos-delay="800" class="swiper-button-next !w-8 bg-text-100 after:!text-sm rounded-full active:scale-95"></div>
+                    <div data-aos="fade-in" data-aos-delay="800" class="swiper-button-prev !w-8 bg-text-100 after:!text-sm rounded-full active:scale-95"></div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+     </section>
+
+
+     <!-- Overview Section -->
+    <section class="py-12 relative">
+      <div class="max-w-max-width-xl w-full mx-auto px-4 md:px-6 lg:px-12">
+        <div class="grid grid-cols-1 lg:grid-cols-[1fr_407px] items-center gap-8 md:gap-12 lg:gap-[71px]">
+          <div data-aos="fade-up" class="flex flex-col gap-4">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo.</p>
+          </div>
+          <div class="bg-surface-20 p-8 md:p-10 text-white min-h-[390px] flex">
+            <div data-aos="fade-up" class="bg-text-100 py-8 px-8 md:px-10 flex flex-col gap-7 flex-1">
+              <h3>Key features</h3>
+              <ul class="text-sm leading-5 font-semibold list-disc pl-4 flex flex-col gap-5">
+                <li>Lorem ipsum dolor.</li>
+                <li>Ut enim ad minim veniam.</li>
+                <li>Duis aute irure.</li>
+                <li>Excepteur sint laborum.</li>
+              </ul>
+            </div>
+          </div>
+          </div>
+      </div>
+    </section>
+
+     <!-- Floor plans Section -->
+     <section x-data="{ floor : 'ground' }" class="pb-14 md:pb-16 relative">
+      <div class="max-w-max-width-xl w-full mx-auto px-4 md:px-6 lg:px-12">
+        <div class="flex flex-col gap-4">
+          <h2 data-aos="fade-up">Floor plans</h2>
+          <div class="grid md:grid-cols-2 lg:grid-cols-[1fr_407px] gap-6">
+            <div class="relative flex justify-center items-center h-[608px]">
+              <div class="py-3.5 flex items-center gap-8 md:gap-12 absolute left-0 top-0">
+                <button data-aos="fade-up" @click="floor = 'ground'" type="button" :class="floor === 'ground' ? 'after:bg-text-100' : 'after:bg-white'" class="text-xxs leading-3 tracking-link font-semibold uppercase cursor-pointer relative after:absolute after:left-0 after:right-0 after:-bottom-1 after:h-px after:w-full">Ground floor</button>
+                <button data-aos="fade-up" @click="floor = 'first'" type="button" :class="floor === 'first' ? 'after:bg-text-100' : 'after:bg-white'" class="text-xxs leading-3 tracking-link font-semibold uppercase cursor-pointer relative after:absolute after:left-0 after:right-0 after:-bottom-1 after:h-px after:w-full">first floor</button>
+              </div>
+              <img data-aos="fade-up" x-show="floor === 'ground'" width="304" height="504" src="assets/images/plot-floor-plan1.png" alt="plot">
+              <img data-aos="fade-up" x-show="floor === 'first'" width="304" height="504" src="assets/images/plot-floor-plan2.png" alt="plot">
+
+              <a data-aos="fade-up" x-show="floor === 'ground'" data-gallery="ground" href="assets/images/plot-floor-plan1.png" class="glightbox absolute right-0 bottom-0">
+                <button class="cursor-pointer size-8">
+                  <img src="assets/images/svg/zoom-icon.svg" alt="zoom"/>
+                </button>
+              </a>
+              <a data-aos="fade-up" x-show="floor === 'first'" data-gallery="first" href="assets/images/plot-floor-plan2.png" class="glightbox absolute right-0 bottom-0">
+                <button class="cursor-pointer size-8">
+                  <img src="assets/images/svg/zoom-icon.svg" alt="zoom"/>
+                </button>
+              </a>
+            </div>
+            <div data-aos="fade-up" class="bg-action-40 p-12 md:p-16 lg:p-[74px]">
+              <div x-show="floor === 'ground'"  class="flex flex-col gap-4">
+                <h4>Dimensions</h4>
+                <ul class="flex flex-col gap-4">
+                  <li class="flex flex-col gap-1">
+                    <div class="font-semibold">Kitchen & living area</div>
+                    <div class="flex items-center gap-2"><span>7.3m x 5.7m</span><span>|</span><span>24’0” x 18’7”</span></div>
+                  </li>
+                  <li class="flex flex-col gap-1">
+                    <div class="font-semibold">Study</div>
+                    <div class="flex items-center gap-2"><span>3.4m x 3.0m</span><span>|</span><span>11’2” x 9’8”</span></div>
+                  </li>
+                  <li class="flex flex-col gap-1">
+                    <div class="font-semibold">Bathroom</div>
+                    <div class="flex items-center gap-2"><span>2.0m x 1.9m</span><span>|</span><span>6'6” x 6’2”</span></div>
+                  </li>
+                  <li class="flex flex-col gap-1">
+                    <div class="font-semibold">Master bedroom</div>
+                    <div class="flex items-center gap-2"><span>3.9m x 3.3m</span><span>|</span><span>12'8” x 10’8”</span></div>
+                  </li>
+                  <li class="flex flex-col gap-1">
+                    <div class="font-semibold">En Suite</div>
+                    <div class="flex items-center gap-2"><span>2.4m x 1.4m</span><span>|</span><span>7'9” x 4’6”</span></div>
+                  </li>
+                  <li class="flex flex-col gap-1">
+                    <div class="font-semibold">Bedroom 2</div>
+                    <div class="flex items-center gap-2"><span>4.3m x 3.0m</span><span>|</span><span>14'0” x 9’8”</span></div>
+                  </li>
+                </ul>
+              </div>
+
+              <div data-aos="fade-up" x-show="floor === 'first'" class="flex flex-col gap-4">
+                <h4>Dimensions</h4>
+                <ul class="flex flex-col gap-4">
+                  <li class="flex flex-col gap-1">
+                    <div class="font-semibold">Bathroom</div>
+                    <div class="flex items-center gap-2"><span>8.3m x 5.7m</span><span>|</span><span>24’0” x 18’7”</span></div>
+                  </li>
+                  <li class="flex flex-col gap-1">
+                    <div class="font-semibold">Study</div>
+                    <div class="flex items-center gap-2"><span>3.4m x 3.0m</span><span>|</span><span>11’2” x 9’8”</span></div>
+                  </li>
+                  <li class="flex flex-col gap-1">
+                    <div class="font-semibold">Kitchen & living area</div>
+                    <div class="flex items-center gap-2"><span>2.0m x 1.9m</span><span>|</span><span>6'6” x 6’2”</span></div>
+                  </li>
+                  <li class="flex flex-col gap-1">
+                    <div class="font-semibold">Master bedroom</div>
+                    <div class="flex items-center gap-2"><span>3.9m x 3.3m</span><span>|</span><span>12'8” x 10’8”</span></div>
+                  </li>
+                  <li class="flex flex-col gap-1">
+                    <div class="font-semibold">En Suite</div>
+                    <div class="flex items-center gap-2"><span>2.4m x 1.4m</span><span>|</span><span>7'9” x 4’6”</span></div>
+                  </li>
+                  <li class="flex flex-col gap-1">
+                    <div class="font-semibold">Bedroom 2</div>
+                    <div class="flex items-center gap-2"><span>4.3m x 3.0m</span><span>|</span><span>14'0” x 9’8”</span></div>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Other Properties List Section -->
+    <section class="bg-surface-10 py-10">
+       <div class="max-w-max-width-xl w-full mx-auto px-4 md:px-6 lg:px-12">
+          <div class="flex flex-col gap-10">
+              <h3 data-aos="fade-up">Other properties at Little Acre</h3>
+              <div class="more-property-swiper">
+                <div class="swiper h-full">
+                    <div class="swiper-wrapper pb-9">
+                      <!-- Slides -->
+                      <div data-aos="fade-up" class="swiper-slide">
+                        <div class="flex flex-col">
+                          <div class="aspect-[407/265] w-full">
+                            <img class="size-full object-cover" src="assets/images/property/little-acre-plot-1.jpg" alt="property" />
+                          </div>
+                          <div class="p-6 flex flex-col gap-4">
+                            <h4>Plot One, Little Acre</h4>
+                            <span class="h-px bg-text-20 w-full"></span>
+                            <ul class="flex flex-col gap-2 text-sm font-semibold">
+                              <li class="flex items-center gap-2">
+                                <img src="assets/images/svg/house-type.svg" alt="icon">
+                                <span>4 bedroom</span>
+                              </li>
+                              <li class="flex items-center gap-2">
+                                <img src="assets/images/svg/price.svg" alt="icon">
+                                <span>£1,000,000</span>
+                              </li>
+                            </ul>
+                            <div class="flex justify-start">
+                              <a href="javascript:;" class="btn btn-primary-outline">FIND OUT MORE</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div data-aos="fade-up" data-aos-delay="100" class="swiper-slide">
+                        <div class="flex flex-col">
+                          <div class="aspect-[407/265] w-full">
+                            <img class="size-full object-cover" src="assets/images/property/little-acre.jpg" alt="property" />
+                          </div>
+                          <div class="p-6 flex flex-col gap-4">
+                            <h4>Plot Two, Little Acre</h4>
+                            <span class="h-px bg-text-20 w-full"></span>
+                            <ul class="flex flex-col gap-2 text-sm font-semibold">
+                              <li class="flex items-center gap-2">
+                                <img src="assets/images/svg/house-type.svg" alt="icon">
+                                <span>4 bedroom</span>
+                              </li>
+                              <li class="flex items-center gap-2">
+                                <img src="assets/images/svg/price.svg" alt="icon">
+                                <span>£1,000,000</span>
+                              </li>
+                            </ul>
+                            <div class="flex justify-start">
+                              <a href="javascript:;" class="btn btn-primary-outline">FIND OUT MORE</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div data-aos="fade-up" data-aos-delay="200" class="swiper-slide">
+                        <div class="flex flex-col">
+                          <div class="aspect-[407/265] w-full">
+                            <img class="size-full object-cover" src="assets/images/property/little-acre-plot-1.jpg" alt="property" />
+                          </div>
+                          <div class="p-6 flex flex-col gap-4">
+                            <h4>Plot Three, Little Acre</h4>
+                            <span class="h-px bg-text-20 w-full"></span>
+                            <ul class="flex flex-col gap-2 text-sm font-semibold">
+                              <li class="flex items-center gap-2">
+                                <img src="assets/images/svg/house-type.svg" alt="icon">
+                                <span>4 bedroom</span>
+                              </li>
+                              <li class="flex items-center gap-2">
+                                <img src="assets/images/svg/price.svg" alt="icon">
+                                <span>£1,000,000</span>
+                              </li>
+                            </ul>
+                            <div class="flex justify-start">
+                              <a href="javascript:;" class="btn btn-primary-outline">FIND OUT MORE</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div data-aos="fade-up" class="swiper-pagination !bottom-0"></div>
+                </div>
+              </div>
+               
+          </div>
+       </div>
+    </section>
+ 
+
+    <!-- Register section -->
+    <section class="relative py-16 md:py-24">
+      <!-- Reference Scroll View -->
+      <div id="register" class="absolute left-0 top-[-116px] md:top-[-144px] invisible opacity-0"></div>
+      <div class="max-w-max-width-xl w-full mx-auto px-4 md:px-6 lg:px-12">
+        <div class="grid lg:grid-cols-[1fr_310px] items-center gap-10 xl:gap-40 max-w-[315px] lg:max-w-none mx-auto lg:mx-0">
+          <div class="flex flex-col lg:flex-row  items-center gap-7 md:gap-10 xl:gap-24">
+            <img data-aos="fade-up" class="w-[192px] md:w-[275px]" width="275" height="155" src="assets/images/svg/little-acre-logo.svg" alt="logo"/>
+            <div class="flex flex-col gap-8 items-center lg:items-start">
+            <div data-aos="fade-up" class="font-normal text-sm uppercase">CALL NOW <a href="tel:01905691048" class="font-semibold">01905 691 048</a></div>
+              <ul data-aos="fade-up" class="flex flex-col gap-2 text-sm font-semibold">
+                <li class="flex items-center gap-2">
+                  <img src="assets/images/svg/house-type-dark.svg" alt="icon">
+                  <span>Two luxury detached 4 bedroom homes</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <img src="assets/images/svg/price-dark.svg" alt="icon">
+                  <span>Prices from £1,150,000</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <img src="assets/images/svg/pin-dark.svg" alt="icon">
+                  <span>Lower Broadheath, Worcestershire</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="flex flex-col gap-[18px]">
+            <div data-aos="fade-up" class="grid grid-cols-2 gap-3.5">
+              <a href="javascript:;" class="btn btn-theme">directions</a>
+              <a href="javascript:;" class="btn btn-primary-outline">viewing</a>
+            </div>
+            <div data-aos="fade-up" class="px-5 flex justify-center">
+              <div class="h-px w-full bg-text-20"></div>
+            </div>
+            <div data-aos="fade-up" class="grid gap-3.5">
+              <button type="button" class="btn btn-primary">register interest</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+   
+     <!-- Footer -->
+      <footer class="bg-text-100 pt-12 pb-8">
+          <div class="max-w-max-width-xl w-full mx-auto px-4 md:px-6 lg:px-12">
+              <div class="flex flex-col gap-10 md:gap-7">
+                  <div class="flex flex-col items-center md:items-stretch md:flex-row justify-between gap-8 lg:gap-16">
+                    <div class="flex flex-col items-center md:items-start text-center md:text-start gap-8 md:gap-14 justify-between max-w-[410px] md:pb-5">
+                        <a href="index.html">
+                          <img src="assets/images/svg/logo-white.svg" alt="logo" />
+                        </a>
+                        <h6 class="text-lg leading-6 font-cormorant tracking-tight text-white">At Lockley Homes, we pride ourselves on creating desirable homes in the most sought-after locations throughout The Cotswolds, Worcestershire and Warwickshire.</h6>
+                    </div>
+                     
+                    <div class="flex flex-col md:flex-row gap-8 md:gap-16 shrink-0 text-center md:text-start">
+                      <ul class="text-xxs tracking-link leading-6 text-white uppercase hovered-links">
+                          <li class="font-semibold"><a href="#">Find your home</a></li>
+                          <li class="font-semibold"><a href="#">View all developments</a></li>
+                          <li>&nbsp;</li>
+                          <li><a href="#">homes in the cotswolds</a></li>
+                          <li><a href="#">homes in worcestershire</a></li>
+                          <li><a href="#">homes in warwickshire</a></li>
+                      </ul>
+                      <div class="flex flex-col md:items-start gap-8 md:gap-12">
+                        <ul class="text-xxs tracking-link leading-6 text-white uppercase hovered-links">
+                          <li><a href="#">About us</a></li>
+                          <li><a href="#">lockley Bespoke</a></li>
+                          <li><a href="#">customer care</a></li>
+                          <li><a href="#">customer charter</a></li>
+                          <li><a href="#">aftercare service</a></li>
+                          <li><a href="#">Land required</a></li>
+                          <li><a href="#">latest news</a></li>
+                          <li><a href="#">contact us</a></li>
+                      </ul>
+                      <ul class="flex self-center md:self-auto items-center gap-[18px]">
+                        <li>
+                          <a target="_blank" href="https://www.youtube.com/channel/UCzdjjKEo1BINeWM7WE_uqWg">
+                            <img src="assets/images/svg/youtube.svg" alt="youtube" />
+                          </a>
+                        </li>
+                        <li>
+                          <a target="_blank" href="https://www.facebook.com/lockleyhomes">
+                            <img src="assets/images/svg/facebook.svg" alt="facebook" />
+                          </a>
+                        </li>
+                        <li>
+                          <a target="_blank" href="https://instagram.com/lockleyhomes">
+                            <img src="assets/images/svg/instagram.svg" alt="instagram" />
+                          </a>
+                        </li>
+                      </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <ul class="flex flex-col md:flex-row items-center gap-4 md:gap-10 text-white text-xs">
+                    <li class="order-1 md:order-0">© 2025 Lockley Homes. All rights reserved.</li>
+                    <li><a target="_blank" href="#">Privacy policy</a></li>
+                    <li><a target="_blank" href="#">Site by TaylorGodley</a></li>
+                  </ul>
+              </div>
+          </div>
+      </footer>
+</body>
+
+ <!-- Apline JS -->
+ <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<!-- LightBox JS -->
+<script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+<!-- Main JS -->
+<script type="text/javascript" src="assets/js/main.js"></script>
+
+<!-- Alpine Site Zoom In/Out -->
+<script>
+  function zoomableImage() {
+    return {
+      scale: 1,
+      minScale: 1,
+      maxScale: 3,
+      step: 0.1,
+      zoomIn() {
+        if (this.scale < this.maxScale) this.scale += this.step;
+      },
+      zoomOut() {
+        if (this.scale > this.minScale) this.scale -= this.step;
+      }
+    }
+  }
+</script>
+</html>

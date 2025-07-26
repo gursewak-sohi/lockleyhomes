@@ -32,7 +32,7 @@
   });
 
 
-  // Hero Swiper
+  // Properties Details Swiper
   document.querySelectorAll(".property-details-swiper").forEach((container) => {
     const swiperEl = container.querySelector(".swiper"),
           nextEl = container.querySelector(".swiper-button-next"),
@@ -51,6 +51,35 @@
           navigation: {
             nextEl: nextEl,
             prevEl: prevEl,
+          },
+      });
+  });
+
+  // More Properties Swiper
+  document.querySelectorAll(".more-property-swiper").forEach((container) => {
+    const swiperEl = container.querySelector(".swiper"),
+          paginationEl = container.querySelector(".swiper-pagination");
+
+      new Swiper(swiperEl, {
+          slidesPerView: 1,
+          spaceBetween: 12,
+          autoplay: {
+            delay: 5000,
+          },
+          pagination: {
+            el: paginationEl
+          },
+          grabCursor: true,
+          loop: true,
+          breakpoints: {
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 24,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 24,
+            },
           },
       });
   });

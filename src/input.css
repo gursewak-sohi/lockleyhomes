@@ -22,6 +22,8 @@
 :root {
   --swiper-navigation-color : #FFFFFF;
   --swiper-navigation-size: 32px;
+  --swiper-theme-color:  var(--color-text-100);
+  --swiper-pagination-bullet-size: 12px;
 }
 
 h1, .h1 {
@@ -34,7 +36,11 @@ h2, .h2 {
  
  
 h3, .h3 {
-  @apply font-cormorant text-[32px] leading-10 font-normal
+  @apply font-cormorant text-[32px] leading-10 font-normal tracking-tight
+}
+
+h4, .h4 {
+  @apply font-cormorant text-2xl leading-8 font-normal tracking-tight
 }
 
 .btn {
