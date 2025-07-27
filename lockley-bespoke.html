@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lockley Homes | Bespoke </title>
+    <link rel="shortcut icon" href="assets/images/svg/favicon.svg" />
+    <!-- Swiper JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- LightBox CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+    <!-- Main CSS -->
+    <link href="./assets/css/style.css" rel="stylesheet" />
+    
+</head>
+
+<body class="font-sans text-base antialiased text-text-100 pt-[72px] md:pt-[100px]">
+    <!-- Header -->
+    <header x-data="{ open: false }" class="relative z-30">
+      <div data-aos="fade-down" data-aos-delay="200" class="aos-desktop-only bg-white fixed w-full top-0 shadow-header z-30">
+        <div class="max-w-max-width-xl w-full mx-auto px-4 md:px-6 lg:px-12">
+          <div class="flex justify-between py-4 md:py-[30px] items-center">
+              <a href="index.html">
+                <img src="assets/images/svg/logo.svg" alt="logo" />
+              </a>
+              <ul class="flex items-center gap-[58px] uppercase font-semibold text-xxs leading-3 tracking-link hovered-links">
+                <li class="hidden md:block">
+                  <a href="#">Find your home</a>
+                </li>
+                <li class="hidden md:block">
+                  <a href="#">Customer care</a>
+                </li>
+                <li>
+                  <button @click.stop="open = !open" class="size-8 cursor-pointer flex items-center justify-center" type="button">
+                      <img src="assets/images/svg/menu.svg" alt="menu" />
+                  </button>
+                </li>
+              </ul>
+          </div>
+        </div>
+      </div>
+      <div class="max-w-max-width-xl w-full z-20 flex justify-end fixed left-1/2 -translate-x-1/2">
+        <div @click.away="open = false" :class="open ? 'h-[482px] md:h-[384px]' : 'h-0'" class="shadow-xl w-full max-w-full md:max-w-[283px] bg-white top-[100px] right-0 overflow-hidden duration-300">
+          <ul class="flex flex-col uppercase font-semibold text-xxs leading-3 tracking-link">
+            <li class="border-b border-text-60/20 block md:hidden">
+              <a class="px-8 md:px-12 py-7 md:py-8 block hover:bg-surface-20 duration-300" href="#">Find your home</a>
+            </li>
+            <li class="border-b border-text-60/20 block md:hidden">
+              <a class="px-8 md:px-12 py-7 md:py-8 block hover:bg-surface-20 duration-300" href="#">Customer care</a>
+            </li>
+            <li class="border-b border-text-60/20">
+              <a class="px-8 md:px-12 py-7 md:py-8 block hover:bg-surface-20 duration-300" href="#">Bespoke homes</a>
+            </li>
+            <li class="border-b border-text-60/20">
+              <a class="px-8 md:px-12 py-7 md:py-8 block hover:bg-surface-20 duration-300" href="#">About Us</a>
+            </li>
+            <li class="border-b border-text-60/20">
+              <a class="px-8 md:px-12 py-7 md:py-8 block hover:bg-surface-20 duration-300" href="#">Land</a>
+            </li>
+            <li class="border-b border-text-60/20">
+              <a class="px-8 md:px-12 py-7 md:py-8 block hover:bg-surface-20 duration-300" href="#">Latest News</a>
+            </li>
+            <li class="">
+              <a class="px-8 md:px-12 py-7 md:py-8 block hover:bg-surface-20 duration-300" href="#">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <!-- Bespoke Section -->
+     <section class="bg-text-60 mt-[-100px] pt-[100px]">
+      <div class="max-w-max-width-xl w-full mx-auto">
+        <div class="flex flex-col lg:flex-row w-full">
+          <div  class="w-full lg:w-[65%] relative">
+            <div class="aspect-[9/6] md:aspect-auto md:h-[600px] md:-ml-[max(calc((100vw-1366px)/2),0px)]">
+              <img data-aos="fade-in" data-aos-delay="700" class="object-cover object-top size-full" src="assets/images/bespoke-banner.jpg" />
+            </div>
+          </div>
+          <div class="bg-text-60 text-white flex px-4 md:pl-6 lg:pl-12 lg:pr-7 py-10 lg:py-24 w-full lg:w-[35%]">
+            <div class="flex flex-col gap-[18px] mt-auto">
+              <h2 data-aos="fade-up" data-aos-delay="750">Lockley Bespoke</h2>
+              <h4 data-aos="fade-up" data-aos-delay="800">Lorem ipsum dolor sit amet,<br/> consectetur elit aliqua.</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+     </section>
+
+
+     <!-- Text Image Section -->
+    <section class="pt-14 pb-14 md:pt-20 lg:pt-28 md:pb-20 relative">
+      <div class="max-w-max-width-xl w-full mx-auto px-4 md:px-6 lg:px-12">
+        <div class="grid grid-cols-1 lg:grid-cols-[1fr_496px] items-center gap-8 md:gap-12 lg:gap-[70px] xl:gap-[140px]">
+          <div class="flex flex-col gap-5">
+            <h3 data-aos="fade-up">Duis aute irure dolor in reprehend erit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.</h3>
+            <div data-aos="fade-up" class="flex flex-col gap-4">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.</p>
+            </div>
+          </div>
+          <div class="aspect-[496/415] max-h-[415px] mx-auto">
+            <img data-aos="fade-in" class="object-cover size-full" src="assets/images/bespoke/content-1.png" alt="content" />
+          </div>
+          </div>
+      </div>
+    </section>
+
+    <!-- Text Section -->
+    <section class="bg-surface-10">
+      <div class="grid lg:grid-cols-2">
+        <div class="aspect-[683/547] lg:aspect-auto lg:h-[547px] overflow-hidden">
+          <img data-aos="zoom-out" class="object-cover size-full" src="assets/images/bespoke/content-2.jpg" alt="content">
+        </div>
+        <div class="p-8 md:py-[90px] md:px-24 xl:px-0 xl:mx-[136px] flex flex-col justify-end gap-4 xl:max-w-[344px]">
+          <h2 data-aos="fade-up">Lorem ipsum</h2>
+          <h4 data-aos="fade-up">Duis aute irure dolor in reprehend erit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.</h4>
+        </div>
+      </div>
+    </section> 
+
+    <!-- Text Image Section -->
+    <section class="py-14 md:py-20 relative">
+      <div class="max-w-max-width-xl w-full mx-auto px-4 md:px-6 lg:px-12">
+        <div class="grid grid-cols-1 lg:grid-cols-[1fr_496px] items-center gap-8 md:gap-12 lg:gap-[70px] xl:gap-[140px]">
+          <div data-aos="fade-up" class="flex flex-col gap-4">
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.</p>
+          </div>
+          <div class="aspect-[496/415] max-h-[415px] mx-auto">
+            <img data-aos="fade-in" class="object-cover size-full" src="assets/images/bespoke/content-3.jpg" alt="content" />
+          </div>
+          </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="lg:pt-10 pb-14 md:pb-20 lg:pb-32 relative">
+      <div class="max-w-max-width-xl w-full mx-auto px-4 md:px-6 lg:px-12">
+        <div class="flex flex-col gap-12 md:gap-16 max-w-[837px] items-center text-center mx-auto">
+          <h3 data-aos="fade-up">Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, illum qui dolorem eum fugiat quo, lorem ipsum dolor sit amet.</h3>
+          <div class="flex flex-col md:flex-row items-center gap-5 md:gap-[74px]">
+            <a data-aos="fade-up" class="btn btn-primary" href="developments.html">VIEW DEVELOPMENTS</a>
+            <a data-aos="fade-up" data-aos-delay="100" class="btn btn-theme" href="contact-us.html">contact us</a>
+          </div>
+          </div>
+      </div>
+    </section>
+    
+ 
+ 
+     <!-- Footer -->
+      <footer class="bg-text-100 pt-12 pb-8">
+          <div class="max-w-max-width-xl w-full mx-auto px-4 md:px-6 lg:px-12">
+              <div class="flex flex-col gap-10 md:gap-7">
+                  <div class="flex flex-col items-center md:items-stretch md:flex-row justify-between gap-8 lg:gap-16">
+                    <div class="flex flex-col items-center md:items-start text-center md:text-start gap-8 md:gap-14 justify-between max-w-[410px] md:pb-5">
+                        <a href="index.html">
+                          <img src="assets/images/svg/logo-white.svg" alt="logo" />
+                        </a>
+                        <h6 class="text-lg leading-6 font-cormorant tracking-tight text-white">At Lockley Homes, we pride ourselves on creating desirable homes in the most sought-after locations throughout The Cotswolds, Worcestershire and Warwickshire.</h6>
+                    </div>
+                     
+                    <div class="flex flex-col md:flex-row gap-8 md:gap-16 shrink-0 text-center md:text-start">
+                      <ul class="text-xxs tracking-link leading-6 text-white uppercase hovered-links">
+                          <li class="font-semibold"><a href="#">Find your home</a></li>
+                          <li class="font-semibold"><a href="#">View all developments</a></li>
+                          <li>&nbsp;</li>
+                          <li><a href="#">homes in the cotswolds</a></li>
+                          <li><a href="#">homes in worcestershire</a></li>
+                          <li><a href="#">homes in warwickshire</a></li>
+                      </ul>
+                      <div class="flex flex-col md:items-start gap-8 md:gap-12">
+                        <ul class="text-xxs tracking-link leading-6 text-white uppercase hovered-links">
+                          <li><a href="#">About us</a></li>
+                          <li><a href="#">lockley Bespoke</a></li>
+                          <li><a href="#">customer care</a></li>
+                          <li><a href="#">customer charter</a></li>
+                          <li><a href="#">aftercare service</a></li>
+                          <li><a href="#">Land required</a></li>
+                          <li><a href="#">latest news</a></li>
+                          <li><a href="#">contact us</a></li>
+                      </ul>
+                      <ul class="flex self-center md:self-auto items-center gap-[18px]">
+                        <li>
+                          <a target="_blank" href="https://www.youtube.com/channel/UCzdjjKEo1BINeWM7WE_uqWg">
+                            <img src="assets/images/svg/youtube.svg" alt="youtube" />
+                          </a>
+                        </li>
+                        <li>
+                          <a target="_blank" href="https://www.facebook.com/lockleyhomes">
+                            <img src="assets/images/svg/facebook.svg" alt="facebook" />
+                          </a>
+                        </li>
+                        <li>
+                          <a target="_blank" href="https://instagram.com/lockleyhomes">
+                            <img src="assets/images/svg/instagram.svg" alt="instagram" />
+                          </a>
+                        </li>
+                      </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <ul class="flex flex-col md:flex-row items-center gap-4 md:gap-10 text-white text-xs">
+                    <li class="order-1 md:order-0">© 2025 Lockley Homes. All rights reserved.</li>
+                    <li><a target="_blank" href="#">Privacy policy</a></li>
+                    <li><a target="_blank" href="#">Site by TaylorGodley</a></li>
+                  </ul>
+              </div>
+          </div>
+      </footer>
+</body>
+
+ <!-- Apline JS -->
+ <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<!-- LightBox JS -->
+<script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+<!-- Main JS -->
+<script type="text/javascript" src="assets/js/main.js"></script>
+
+<!-- Alpine Site Zoom In/Out -->
+<script>
+  function zoomableImage() {
+    return {
+      scale: 1,
+      minScale: 1,
+      maxScale: 3,
+      step: 0.1,
+      zoomIn() {
+        if (this.scale < this.maxScale) this.scale += this.step;
+      },
+      zoomOut() {
+        if (this.scale > this.minScale) this.scale -= this.step;
+      }
+    }
+  }
+</script>
+</html>
