@@ -692,6 +692,9 @@
   .object-top {
     object-position: top;
   }
+  .p-4 {
+    padding: calc(var(--spacing) * 4);
+  }
   .p-5 {
     padding: calc(var(--spacing) * 5);
   }
@@ -1329,6 +1332,11 @@
       gap: 30px;
     }
   }
+  .md\:gap-\[52px\] {
+    @media (width >= 48rem) {
+      gap: 52px;
+    }
+  }
   .md\:gap-\[74px\] {
     @media (width >= 48rem) {
       gap: 74px;
@@ -1418,6 +1426,11 @@
   .md\:py-\[60px\] {
     @media (width >= 48rem) {
       padding-block: 60px;
+    }
+  }
+  .md\:py-\[67px\] {
+    @media (width >= 48rem) {
+      padding-block: 67px;
     }
   }
   .md\:py-\[90px\] {
@@ -1743,6 +1756,11 @@
   .xl\:ml-\[-60px\] {
     @media (width >= 80rem) {
       margin-left: -60px;
+    }
+  }
+  .xl\:max-w-\[320px\] {
+    @media (width >= 80rem) {
+      max-width: 320px;
     }
   }
   .xl\:max-w-\[344px\] {
