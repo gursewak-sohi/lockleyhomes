@@ -17,7 +17,7 @@
     
 </head>
 
-<body class="font-sans text-base antialiased text-text-100 pt-[72px] md:pt-[100px]">
+<body class="font-sans text-base antialiased text-text-100 pt-20 md:pt-[100px]">
     <!-- Header -->
     <header x-data="{ open: false }" class="relative z-30">
       <div data-aos="fade-down" data-aos-delay="200" class="aos-desktop-only bg-white fixed w-full top-0 shadow-header z-30">
@@ -226,21 +226,5 @@
 <!-- Main JS -->
 <script type="text/javascript" src="assets/js/main.js"></script>
 
-<!-- Alpine Site Zoom In/Out -->
-<script>
-  function zoomableImage() {
-    return {
-      scale: 1,
-      minScale: 1,
-      maxScale: 3,
-      step: 0.1,
-      zoomIn() {
-        if (this.scale < this.maxScale) this.scale += this.step;
-      },
-      zoomOut() {
-        if (this.scale > this.minScale) this.scale -= this.step;
-      }
-    }
-  }
-</script>
+ 
 </html>

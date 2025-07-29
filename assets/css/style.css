@@ -270,6 +270,9 @@
   .mt-10 {
     margin-top: calc(var(--spacing) * 10);
   }
+  .mt-14 {
+    margin-top: calc(var(--spacing) * 14);
+  }
   .mt-\[-100px\] {
     margin-top: -100px;
   }
@@ -281,6 +284,9 @@
   }
   .mr-0 {
     margin-right: calc(var(--spacing) * 0);
+  }
+  .mr-28 {
+    margin-right: calc(var(--spacing) * 28);
   }
   .mb-2 {
     margin-bottom: calc(var(--spacing) * 2);
@@ -342,8 +348,15 @@
   .aspect-\[683\/547\] {
     aspect-ratio: 683/547;
   }
+  .aspect-\[839\/666\] {
+    aspect-ratio: 839/666;
+  }
   .aspect-\[1366\/520\] {
     aspect-ratio: 1366/520;
+  }
+  .size-2 {
+    width: calc(var(--spacing) * 2);
+    height: calc(var(--spacing) * 2);
   }
   .size-8 {
     width: calc(var(--spacing) * 8);
@@ -405,6 +418,9 @@
   .max-h-\[547px\] {
     max-height: 547px;
   }
+  .max-h-\[666px\] {
+    max-height: 666px;
+  }
   .max-h-\[696px\] {
     max-height: 696px;
   }
@@ -446,6 +462,9 @@
   }
   .max-w-\[690px\] {
     max-width: 690px;
+  }
+  .max-w-\[730px\] {
+    max-width: 730px;
   }
   .max-w-\[784px\] {
     max-width: 784px;
@@ -948,6 +967,9 @@
   .text-white {
     color: var(--color-white);
   }
+  .capitalize {
+    text-transform: capitalize;
+  }
   .uppercase {
     text-transform: uppercase;
   }
@@ -1307,6 +1329,11 @@
       gap: calc(var(--spacing) * 10);
     }
   }
+  .md\:gap-11 {
+    @media (width >= 48rem) {
+      gap: calc(var(--spacing) * 11);
+    }
+  }
   .md\:gap-12 {
     @media (width >= 48rem) {
       gap: calc(var(--spacing) * 12);
@@ -1538,6 +1565,11 @@
       margin-top: calc(var(--spacing) * 10);
     }
   }
+  .lg\:mt-14 {
+    @media (width >= 64rem) {
+      margin-top: calc(var(--spacing) * 14);
+    }
+  }
   .lg\:-mr-10 {
     @media (width >= 64rem) {
       margin-right: calc(var(--spacing) * -10);
@@ -1606,6 +1638,11 @@
   .lg\:grid-cols-\[1fr_496px\] {
     @media (width >= 64rem) {
       grid-template-columns: 1fr 496px;
+    }
+  }
+  .lg\:grid-cols-\[387px_1fr\] {
+    @media (width >= 64rem) {
+      grid-template-columns: 387px 1fr;
     }
   }
   .lg\:grid-cols-\[406px_1fr\] {
@@ -1746,6 +1783,11 @@
   .xl\:mx-\[136px\] {
     @media (width >= 80rem) {
       margin-inline: 136px;
+    }
+  }
+  .xl\:mr-28 {
+    @media (width >= 80rem) {
+      margin-right: calc(var(--spacing) * 28);
     }
   }
   .xl\:mr-\[-60px\] {

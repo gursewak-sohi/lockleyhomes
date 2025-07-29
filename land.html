@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lockley Homes | Land </title>
+    <link rel="shortcut icon" href="assets/images/svg/favicon.svg" />
+    <!-- Swiper JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- LightBox CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+    <!-- Main CSS -->
+    <link href="./assets/css/style.css" rel="stylesheet" />
+    
+</head>
+
+<body class="font-sans text-base antialiased text-text-100 pt-20 md:pt-[100px]">
+    <!-- Header -->
+    <header x-data="{ open: false }" class="relative z-30">
+      <div data-aos="fade-down" data-aos-delay="200" class="aos-desktop-only bg-white fixed w-full top-0 shadow-header z-30">
+        <div class="max-w-max-width-xl w-full mx-auto px-4 md:px-6 lg:px-12">
+          <div class="flex justify-between py-5 md:py-[30px] items-center">
+              <a href="index.html">
+                <img src="assets/images/svg/logo.svg" alt="logo" />
+              </a>
+              <ul class="flex items-center gap-[58px] uppercase font-semibold text-xxs leading-3 tracking-link hovered-links">
+                <li class="hidden md:block">
+                  <a href="developments.html">Find your home</a>
+                </li>
+                <li class="hidden md:block">
+                  <a href="customer-care.html">Customer care</a>
+                </li>
+                <li>
+                  <button @click.stop="open = !open" class="size-8 cursor-pointer flex items-center justify-center" type="button">
+                      <img src="assets/images/svg/menu.svg" alt="menu" />
+                  </button>
+                </li>
+              </ul>
+          </div>
+        </div>
+      </div>
+      <div class="max-w-max-width-xl w-full z-20 flex justify-end fixed left-1/2 -translate-x-1/2">
+        <div @click.away="open = false" :class="open ? 'h-[482px] md:h-[384px]' : 'h-0'" class="shadow-xl w-full max-w-full md:max-w-[283px] bg-white top-[100px] right-0 overflow-hidden duration-300">
+          <ul class="flex flex-col uppercase font-semibold text-xxs leading-3 tracking-link">
+            <li class="border-b border-text-60/20 block md:hidden">
+              <a class="px-8 md:px-12 py-7 md:py-8 block hover:bg-surface-20 duration-300" href="developments.html">Find your home</a>
+            </li>
+            <li class="border-b border-text-60/20 block md:hidden">
+              <a class="px-8 md:px-12 py-7 md:py-8 block hover:bg-surface-20 duration-300" href="customer-care.html">Customer care</a>
+            </li>
+            <li class="border-b border-text-60/20">
+              <a class="px-8 md:px-12 py-7 md:py-8 block hover:bg-surface-20 duration-300" href="lockley-bespoke.html">Bespoke homes</a>
+            </li>
+            <li class="border-b border-text-60/20">
+              <a class="px-8 md:px-12 py-7 md:py-8 block hover:bg-surface-20 duration-300" href="about-us.html">About Us</a>
+            </li>
+            <li class="border-b border-text-60/20">
+              <a class="px-8 md:px-12 py-7 md:py-8 block hover:bg-surface-20 duration-300" href="land.html">Land</a>
+            </li>
+            <li class="border-b border-text-60/20">
+              <a class="px-8 md:px-12 py-7 md:py-8 block hover:bg-surface-20 duration-300" href="latest-news.html">Latest News</a>
+            </li>
+            <li class="">
+              <a class="px-8 md:px-12 py-7 md:py-8 block hover:bg-surface-20 duration-300" href="contact-us.html">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <!-- Banner Section -->
+     <section class="bg-action-20 mt-[-100px] pt-[100px]">
+      <div class="max-w-max-width-xl w-full mx-auto">
+        <div class="flex flex-col lg:flex-row w-full">
+          <div  class="w-full lg:w-[65%] relative">
+            <div class="aspect-[9/6] md:aspect-auto md:h-[600px] md:-ml-[max(calc((100vw-1366px)/2),0px)]">
+              <img data-aos="fade-in" data-aos-delay="700" class="object-cover size-full" src="assets/images/land/banner.jpg" />
+            </div>
+          </div>
+          <div class="bg-action-20 flex px-4 md:pl-6 lg:pl-12 lg:pr-7 py-10 lg:py-24 w-full lg:w-[35%]">
+            <div class="flex flex-col gap-[18px] mt-auto">
+              <h2 data-aos="fade-up" data-aos-delay="750">Land opportunities</h2>
+              <h4 data-aos="fade-up" data-aos-delay="800">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do ut labore et dolore.</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+     </section>
+
+
+     <!-- Text Image Section -->
+    <section class="py-14 relative">
+      <div class="max-w-max-width-xl w-full mx-auto px-4 md:px-6 lg:px-12">
+        <div class="grid grid-cols-1 lg:grid-cols-[387px_1fr] gap-8 md:gap-11">
+            <div class="flex flex-col items-start lg:mt-14">
+              <h4 data-aos="fade-up">We are always on the lookout for new land opportunities across Worcestershire, Warwickshire, Herefordshire, Gloucestershire and Oxfordshire in both urban and rural settings.</h4>
+            </div>
+          <div class="aspect-[839/666] max-h-[666px] mx-auto">
+            <img data-aos="fade-in" data-aos-delay="700" class="object-cover size-full" src="assets/images/land/map.png" alt="map" />
+          </div>
+          </div>
+      </div>
+    </section>
+
+
+     
+
+    <!-- Text Image Section -->
+    <section class="bg-surface-10">
+      <div class="grid lg:grid-cols-2">
+        <div class="aspect-[683/547] lg:aspect-auto lg:h-[547px] overflow-hidden">
+          <img data-aos="zoom-out" class="object-cover size-full" src="assets/images/land/content-1.jpg" alt="content">
+        </div>
+        <div class="px-4 py-8 md:py-[90px] md:px-24 xl:px-0 xl:mx-[136px] flex flex-col justify-end gap-4 xl:max-w-[344px] items-start">
+          <h2 data-aos="fade-up">Land required <br/>for luxury homes</h2>
+          <ul class="flex flex-col gap-3 text-base">
+            <li data-aos="fade-up" class="flex items-center gap-3"> 
+              <span class="size-2 rounded-full bg-text-100"></span>
+              <span>Previously developed brownfield sites</span>
+            </li>
+            <li data-aos="fade-up" class="flex items-center gap-3"> 
+              <span class="size-2 rounded-full bg-text-100"></span>
+              <span>Greenfield sites</span>
+            </li>
+            <li data-aos="fade-up" class="flex items-center gap-3"> 
+              <span class="size-2 rounded-full bg-text-100"></span>
+              <span>Urban or rural locations</span>
+            </li>
+            <li data-aos="fade-up" class="flex items-center gap-3"> 
+              <span class="size-2 rounded-full bg-text-100"></span>
+              <span>0.5+ acres</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section> 
+
+     <!-- Text Section -->
+     <section class="py-14 md:pt-16 md:pb-24 relative">
+      <div class="max-w-max-width-xl w-full mx-auto px-4 md:px-6 lg:px-12">
+        <div class="flex justify-end">
+            <div class="flex flex-col max-w-[730px] xl:mr-28">
+              <div class="flex flex-col gap-4">
+                <p data-aos="fade-up">With almost 20 quality developments to our name, we already have significant expertise in dealing with challenging sites. We pride ourselves in our ability to work with planning departments and local communities to unlock the potential of sensitive locations.</p>
+                <p data-aos="fade-up">Land without planning permission, sites with previous planning refusals and even plots within the Green Belt will all be considered; our team can quickly assess the possibilities of your site and follow up with a discreet professional service. In particular, we are looking for:</p>
+              </div>
+              <div class="flex flex-col gap-4 mt-6">
+                <p data-aos="fade-up">We are happy to work with landowners in a variety of ways, making either unconditional or subject to planning purchases. Options, Joint Ventures and Part Exchange purchases would also be considered.</p>
+                <p data-aos="fade-up">When you sell to Lockley Homes you can rely on our integrity, so that the legacy you leave behind will be one you can be proud of.</p>
+              </div>
+              <div class="flex flex-col gap-4 mt-4">
+                <p class="font-semibold" data-aos="fade-up">Please contact our Land Director, via the form on the right or call 01905 691048 to discuss the possibilities.</p>
+              </div>
+            </div>
+          </div>
+      </div>
+    </section>
+
+ 
+     <!-- Footer -->
+      <footer class="bg-text-100 pt-12 pb-8">
+          <div class="max-w-max-width-xl w-full mx-auto px-4 md:px-6 lg:px-12">
+              <div class="flex flex-col gap-10 md:gap-7">
+                  <div class="flex flex-col items-center md:items-stretch md:flex-row justify-between gap-8 lg:gap-16">
+                    <div class="flex flex-col items-center md:items-start text-center md:text-start gap-8 md:gap-14 justify-between max-w-[410px] md:pb-5">
+                        <a href="index.html">
+                          <img src="assets/images/svg/logo-white.svg" alt="logo" />
+                        </a>
+                        <h6 class="text-lg leading-6 font-cormorant tracking-tight text-white">At Lockley Homes, we pride ourselves on creating desirable homes in the most sought-after locations throughout The Cotswolds, Worcestershire and Warwickshire.</h6>
+                    </div>
+                     
+                    <div class="flex flex-col md:flex-row gap-8 md:gap-16 shrink-0 text-center md:text-start">
+                      <ul class="text-xxs tracking-link leading-6 text-white uppercase hovered-links">
+                          <li class="font-semibold"><a href="#">Find your home</a></li>
+                          <li class="font-semibold"><a href="#">View all developments</a></li>
+                          <li>&nbsp;</li>
+                          <li><a href="#">homes in the cotswolds</a></li>
+                          <li><a href="#">homes in worcestershire</a></li>
+                          <li><a href="#">homes in warwickshire</a></li>
+                      </ul>
+                      <div class="flex flex-col md:items-start gap-8 md:gap-12">
+                        <ul class="text-xxs tracking-link leading-6 text-white uppercase hovered-links">
+                          <li><a href="#">About us</a></li>
+                          <li><a href="#">lockley Bespoke</a></li>
+                          <li><a href="#">customer care</a></li>
+                          <li><a href="#">customer charter</a></li>
+                          <li><a href="#">aftercare service</a></li>
+                          <li><a href="#">Land required</a></li>
+                          <li><a href="#">latest news</a></li>
+                          <li><a href="#">contact us</a></li>
+                      </ul>
+                      <ul class="flex self-center md:self-auto items-center gap-[18px]">
+                        <li>
+                          <a target="_blank" href="https://www.youtube.com/channel/UCzdjjKEo1BINeWM7WE_uqWg">
+                            <img src="assets/images/svg/youtube.svg" alt="youtube" />
+                          </a>
+                        </li>
+                        <li>
+                          <a target="_blank" href="https://www.facebook.com/lockleyhomes">
+                            <img src="assets/images/svg/facebook.svg" alt="facebook" />
+                          </a>
+                        </li>
+                        <li>
+                          <a target="_blank" href="https://instagram.com/lockleyhomes">
+                            <img src="assets/images/svg/instagram.svg" alt="instagram" />
+                          </a>
+                        </li>
+                      </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <ul class="flex flex-col md:flex-row items-center gap-4 md:gap-10 text-white text-xs">
+                    <li class="order-1 md:order-0">© 2025 Lockley Homes. All rights reserved.</li>
+                    <li><a target="_blank" href="#">Privacy policy</a></li>
+                    <li><a target="_blank" href="#">Site by TaylorGodley</a></li>
+                  </ul>
+              </div>
+          </div>
+      </footer>
+</body>
+
+ <!-- Apline JS -->
+ <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<!-- LightBox JS -->
+<script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+<!-- Main JS -->
+<script type="text/javascript" src="assets/js/main.js"></script>
+
+ 
+</html>

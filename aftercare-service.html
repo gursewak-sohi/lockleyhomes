@@ -225,21 +225,5 @@
 <!-- Main JS -->
 <script type="text/javascript" src="assets/js/main.js"></script>
 
-<!-- Alpine Site Zoom In/Out -->
-<script>
-  function zoomableImage() {
-    return {
-      scale: 1,
-      minScale: 1,
-      maxScale: 3,
-      step: 0.1,
-      zoomIn() {
-        if (this.scale < this.maxScale) this.scale += this.step;
-      },
-      zoomOut() {
-        if (this.scale > this.minScale) this.scale -= this.step;
-      }
-    }
-  }
-</script>
+ 
 </html>

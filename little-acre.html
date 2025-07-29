@@ -17,7 +17,7 @@
     
 </head>
 
-<body class="font-sans text-base antialiased text-text-100 pt-[72px] md:pt-[100px]">
+<body class="font-sans text-base antialiased text-text-100 pt-20 md:pt-[100px]">
     <!-- Header -->
     <header x-data="{ open: false }" class="relative z-30">
       <div data-aos="fade-down" data-aos-delay="200" class="aos-desktop-only bg-white fixed w-full top-0 shadow-header z-30">
@@ -297,27 +297,45 @@
     </section>
 
     <!-- Location Section -->
-    <section class="relative py-12 md:py-16 bg-surface-10">
+    <section x-data="{selectedTab : 'Location'}" class="relative py-12 md:py-16 bg-surface-10">
       <!-- Reference Scroll View -->
       <div id="location" class="absolute left-0 top-[-116px] md:top-[-144px] invisible opacity-0"></div>
       <div class="max-w-max-width-xl w-full mx-auto px-4 md:px-6 lg:px-12">
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-12 items-center">
           <div class="flex flex-col">
-            <h2 data-aos="fade-up">Location</h2>
-            <p data-aos="fade-up" class="text-2xl leading-8 tracking-tight font-cormorant mt-4">Duis aute irure dolor in reprehend erit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.</p>
+            <h2 x-text="selectedTab" data-aos="fade-up">Location</h2>
+            <p x-show="selectedTab === 'Location'" data-aos="fade-up" class="text-2xl leading-8 tracking-tight font-cormorant mt-4">Location Duis aute irure dolor in reprehend erit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.</p>
+            <p x-show="selectedTab === 'Amenities'" data-aos="fade-up" class="text-2xl leading-8 tracking-tight font-cormorant mt-4">Amenities Duis aute irure dolor in reprehend erit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.</p>
+            <p x-show="selectedTab === 'Leisure'" data-aos="fade-up" class="text-2xl leading-8 tracking-tight font-cormorant mt-4">Leisure Duis aute irure dolor in reprehend erit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.</p>
+            <p x-show="selectedTab === 'Education'" data-aos="fade-up" class="text-2xl leading-8 tracking-tight font-cormorant mt-4">Education Duis aute irure dolor in reprehend erit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.</p>
             <div data-aos="fade-up" class="mt-8 md:mt-16 grid grid-cols-2 gap-x-8 gap-y-5">
-              <button type="button" class="btn btn-primary-outine">location</button>
-              <button type="button" class="btn btn-theme">Amenities</button>
-              <button type="button" class="btn btn-theme">Leisure</button>
-              <button type="button" class="btn btn-theme">Education</button>
+              <button @click="selectedTab = 'Location'" type="button" :class="selectedTab === 'Location' ? 'btn-primary-outine' : 'btn-theme'" class="btn">Location</button>
+              <button @click="selectedTab = 'Amenities'" type="button" :class="selectedTab === 'Amenities' ? 'btn-primary-outine' : 'btn-theme'" class="btn">Amenities</button>
+              <button @click="selectedTab = 'Leisure'" type="button" :class="selectedTab === 'Leisure' ? 'btn-primary-outine' : 'btn-theme'" class="btn">Leisure</button>
+              <button @click="selectedTab = 'Education'" type="button" :class="selectedTab === 'Education' ? 'btn-primary-outine' : 'btn-theme'" class="btn">Education</button>
             </div>
           </div>
-          <div data-aos="fade-up" class="flex flex-col gap-4">
+          <div x-show="selectedTab === 'Location'" data-aos="fade-up" class="flex flex-col gap-4">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.</p>
+            <p>Location Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.</p>
+          </div>
+          <div x-show="selectedTab === 'Amenities'" data-aos="fade-up" class="flex flex-col gap-4">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+            <p>Amenities Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.</p>
+          </div>
+          <div x-show="selectedTab === 'Leisure'" data-aos="fade-up" class="flex flex-col gap-4">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+            <p>Leisure Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.</p>
+          </div>
+          <div x-show="selectedTab === 'Education'" data-aos="fade-up" class="flex flex-col gap-4">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+            <p>Education Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.</p>
           </div>
           <div data-aos="fade-up" class="md:h-[415px] w-full aspect-[496/415] md:aspect-auto">
-            <img class="size-full object-cover" src="assets/images/property/little-acre-location.jpg" alt="location">
+            <img x-show="selectedTab === 'Location'" class="size-full object-cover" src="assets/images/property/little-acre-location.jpg" alt="Location">
+            <img x-show="selectedTab === 'Amenities'" class="size-full object-cover" src="assets/images/property/little-acre-location.jpg" alt="Amenities">
+            <img x-show="selectedTab === 'Leisure'" class="size-full object-cover" src="assets/images/property/little-acre-location.jpg" alt="Leisure">
+            <img x-show="selectedTab === 'Education'" class="size-full object-cover" src="assets/images/property/little-acre-location.jpg" alt="Education">
           </div>
         </div>
       </div>
