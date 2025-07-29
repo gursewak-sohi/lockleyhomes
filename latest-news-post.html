@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lockley Homes | Latest News | Post </title>
+    <link rel="shortcut icon" href="assets/images/svg/favicon.svg" />
+    <!-- Swiper JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- LightBox CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+    <!-- Main CSS -->
+    <link href="./assets/css/style.css" rel="stylesheet" />
+    
+</head>
+
+<body class="font-sans text-base antialiased text-text-100 pt-20 md:pt-[100px]">
+    <!-- Header -->
+    <header x-data="{ open: false }" class="relative z-30">
+      <div data-aos="fade-down" data-aos-delay="200" class="aos-desktop-only bg-white fixed w-full top-0 shadow-header z-30">
+        <div class="max-w-max-width-xl w-full mx-auto px-4 md:px-6 lg:px-12">
+          <div class="flex justify-between py-5 md:py-[30px] items-center">
+              <a href="index.html">
+                <img src="assets/images/svg/logo.svg" alt="logo" />
+              </a>
+              <ul class="flex items-center gap-[58px] uppercase font-semibold text-xxs leading-3 tracking-link hovered-links">
+                <li class="hidden md:block">
+                  <a href="developments.html">Find your home</a>
+                </li>
+                <li class="hidden md:block">
+                  <a href="customer-care.html">Customer care</a>
+                </li>
+                <li>
+                  <button @click.stop="open = !open" class="size-8 cursor-pointer flex items-center justify-center" type="button">
+                      <img src="assets/images/svg/menu.svg" alt="menu" />
+                  </button>
+                </li>
+              </ul>
+          </div>
+        </div>
+      </div>
+      <div class="max-w-max-width-xl w-full z-20 flex justify-end fixed left-1/2 -translate-x-1/2">
+        <div @click.away="open = false" :class="open ? 'h-[482px] md:h-[384px]' : 'h-0'" class="shadow-xl w-full max-w-full md:max-w-[283px] bg-white top-[100px] right-0 overflow-hidden duration-300">
+          <ul class="flex flex-col uppercase font-semibold text-xxs leading-3 tracking-link">
+            <li class="border-b border-text-60/20 block md:hidden">
+              <a class="px-8 md:px-12 py-7 md:py-8 block hover:bg-surface-20 duration-300" href="developments.html">Find your home</a>
+            </li>
+            <li class="border-b border-text-60/20 block md:hidden">
+              <a class="px-8 md:px-12 py-7 md:py-8 block hover:bg-surface-20 duration-300" href="customer-care.html">Customer care</a>
+            </li>
+            <li class="border-b border-text-60/20">
+              <a class="px-8 md:px-12 py-7 md:py-8 block hover:bg-surface-20 duration-300" href="lockley-bespoke.html">Bespoke homes</a>
+            </li>
+            <li class="border-b border-text-60/20">
+              <a class="px-8 md:px-12 py-7 md:py-8 block hover:bg-surface-20 duration-300" href="about-us.html">About Us</a>
+            </li>
+            <li class="border-b border-text-60/20">
+              <a class="px-8 md:px-12 py-7 md:py-8 block hover:bg-surface-20 duration-300" href="land.html">Land</a>
+            </li>
+            <li class="border-b border-text-60/20">
+              <a class="px-8 md:px-12 py-7 md:py-8 block hover:bg-surface-20 duration-300" href="latest-news.html">Latest News</a>
+            </li>
+            <li class="">
+              <a class="px-8 md:px-12 py-7 md:py-8 block hover:bg-surface-20 duration-300" href="contact-us.html">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <!-- Title Section -->
+    <section class="bg-action-20 mt-[-100px] pt-[100px]">
+      <div class="max-w-max-width-xl w-full mx-auto px-4 md:px-6 lg:px-12">
+        <div class="flex flex-col md:flex-row justify-between gap-4 md:gap-10 lg:gap-20 md:min-h-[280px] lg:min-h-[320px] py-10 md:py-16 lg:py-[85px] xl:pr-[127px]">
+          <h1 data-aos="fade-up" data-aos-delay="700">Lorem ipsum dolor sit amet!</h1>
+        </div>
+      </div>
+    </section>
+ 
+
+    <!-- Share Section -->
+    <section class="mt-14 md:mt-[-75px]">
+      <div class="max-w-max-width-xl w-full mx-auto px-4 md:px-6 lg:px-12">
+        <div class="flex flex-col md:flex-row gap-10 lg:gap-[51px]">
+          <div class="w-full md:max-w-[840px] aspect-[343/235] md:aspect-auto">
+            <img data-aos="fade-up" data-aos-delay="750" class="w-full object-cover h-full md:h-[472px]" src="assets/images/latest-news/banner.jpg" alt="banner"/>
+          </div>
+          <div class="md:mt-[103px] flex flex-col shrink-0">
+            <div data-aos="fade-up" data-aos-delay="800" class="flex items-center gap-4">
+              <span class="uppercase font-semibold tracking-link text-xxs leading-3">SHARE</span>
+              <a target="_blank" href="javascript:;">
+                <img src="assets/images/svg/facebook-dark.svg" alt="facebook">
+              </a>
+              <a target="_blank" href="javascript:;">
+                <img src="assets/images/svg/x-dark.svg" alt="x">
+              </a>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="850" class="flex flex-col gap-2 mt-6 border-b border-text-20 pb-14">
+              <p class="font-semibold">Development update</p>
+              <span class="font-semibold text-xxs leading-3 uppercase tracking-link">July 2025</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+     <!-- Text Image Section -->
+     <section class="py-14 md:py-20">
+      <div class="max-w-max-width-xl w-full mx-auto px-4 md:px-6 lg:px-12">
+        <div class="grid grid-cols-1 lg:grid-cols-[1fr_496px] items-center gap-8 md:gap-12 lg:gap-[70px] xl:gap-[140px]">
+          <div class="flex flex-col items-start gap-5">
+            <h3 data-aos="fade-up">Duis aute irure dolor in reprehend erit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.</h3>
+            <div data-aos="fade-up" class="flex flex-col gap-4">
+              <p>As a Premier Guarantee house builder, we are driven by consummate craftsmanship and innovative design, combining traditional architecture and authentic detailing with contemporary layouts and state-of-the-art technology.</p>
+              <p>We believe in offering affordable luxury, with higher specifications and a more rigorous attention to detail that really sets our homes apart.</p>
+            </div>
+          </div>
+          <div class="aspect-[496/341] max-h-[341px] mx-auto">
+            <img data-aos="fade-in" class="object-cover size-full" src="assets/images/latest-news/content.jpg" alt="content" />
+          </div>
+          </div>
+      </div>
+    </section>
+
+ 
+     <!-- Text Section -->
+     <section class="pt-14 md:pt-16 pb-16 md:pb-20 relative">
+      <div class="max-w-max-width-xl w-full mx-auto px-4 md:px-6 lg:px-12">
+         
+      </div>
+    </section>
+
+ 
+     <!-- Footer -->
+      <footer class="bg-text-100 pt-12 pb-8">
+          <div class="max-w-max-width-xl w-full mx-auto px-4 md:px-6 lg:px-12">
+              <div class="flex flex-col gap-10 md:gap-7">
+                  <div class="flex flex-col items-center md:items-stretch md:flex-row justify-between gap-8 lg:gap-16">
+                    <div class="flex flex-col items-center md:items-start text-center md:text-start gap-8 md:gap-14 justify-between max-w-[410px] md:pb-5">
+                        <a href="index.html">
+                          <img src="assets/images/svg/logo-white.svg" alt="logo" />
+                        </a>
+                        <h6 class="text-lg leading-6 font-cormorant tracking-tight text-white">At Lockley Homes, we pride ourselves on creating desirable homes in the most sought-after locations throughout The Cotswolds, Worcestershire and Warwickshire.</h6>
+                    </div>
+                     
+                    <div class="flex flex-col md:flex-row gap-8 md:gap-16 shrink-0 text-center md:text-start">
+                      <ul class="text-xxs tracking-link leading-6 text-white uppercase hovered-links">
+                          <li class="font-semibold"><a href="#">Find your home</a></li>
+                          <li class="font-semibold"><a href="#">View all developments</a></li>
+                          <li>&nbsp;</li>
+                          <li><a href="#">homes in the cotswolds</a></li>
+                          <li><a href="#">homes in worcestershire</a></li>
+                          <li><a href="#">homes in warwickshire</a></li>
+                      </ul>
+                      <div class="flex flex-col md:items-start gap-8 md:gap-12">
+                        <ul class="text-xxs tracking-link leading-6 text-white uppercase hovered-links">
+                          <li><a href="#">About us</a></li>
+                          <li><a href="#">lockley Bespoke</a></li>
+                          <li><a href="#">customer care</a></li>
+                          <li><a href="#">customer charter</a></li>
+                          <li><a href="#">aftercare service</a></li>
+                          <li><a href="#">Land required</a></li>
+                          <li><a href="#">latest news</a></li>
+                          <li><a href="#">contact us</a></li>
+                      </ul>
+                      <ul class="flex self-center md:self-auto items-center gap-[18px]">
+                        <li>
+                          <a target="_blank" href="https://www.youtube.com/channel/UCzdjjKEo1BINeWM7WE_uqWg">
+                            <img src="assets/images/svg/youtube.svg" alt="youtube" />
+                          </a>
+                        </li>
+                        <li>
+                          <a target="_blank" href="https://www.facebook.com/lockleyhomes">
+                            <img src="assets/images/svg/facebook.svg" alt="facebook" />
+                          </a>
+                        </li>
+                        <li>
+                          <a target="_blank" href="https://instagram.com/lockleyhomes">
+                            <img src="assets/images/svg/instagram.svg" alt="instagram" />
+                          </a>
+                        </li>
+                      </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <ul class="flex flex-col md:flex-row items-center gap-4 md:gap-10 text-white text-xs">
+                    <li class="order-1 md:order-0">© 2025 Lockley Homes. All rights reserved.</li>
+                    <li><a target="_blank" href="#">Privacy policy</a></li>
+                    <li><a target="_blank" href="#">Site by TaylorGodley</a></li>
+                  </ul>
+              </div>
+          </div>
+      </footer>
+</body>
+
+ <!-- Apline JS -->
+ <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<!-- LightBox JS -->
+<script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+<!-- Main JS -->
+<script type="text/javascript" src="assets/js/main.js"></script>
+
+ 
+</html>
