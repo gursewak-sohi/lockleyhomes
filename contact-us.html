@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lockley Homes | Contact us</title>
+    <link rel="shortcut icon" href="assets/images/svg/favicon.svg" />
+    <!-- Swiper JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- LightBox CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+    <!-- Main CSS -->
+    <link href="./assets/css/style.css" rel="stylesheet" />
+    
+</head>
+
+<body class="font-sans text-base antialiased text-text-100 pt-20 md:pt-[100px]">
+    <!-- Header -->
+    <header x-data="{ open: false }" class="relative z-30">
+      <div data-aos="fade-down" data-aos-delay="200" class="aos-desktop-only bg-white fixed w-full top-0 shadow-header z-30">
+        <div class="max-w-max-width-xl w-full mx-auto px-4 md:px-6 lg:px-12">
+          <div class="flex justify-between py-5 md:py-[30px] items-center">
+              <a href="index.html">
+                <img src="assets/images/svg/logo.svg" alt="logo" />
+              </a>
+              <ul class="flex items-center gap-[58px] uppercase font-semibold text-xxs leading-3 tracking-link hovered-links">
+                <li class="hidden md:block">
+                  <a href="developments.html">Find your home</a>
+                </li>
+                <li class="hidden md:block">
+                  <a href="customer-care.html">Customer care</a>
+                </li>
+                <li>
+                  <button @click.stop="open = !open" class="size-8 cursor-pointer flex items-center justify-center" type="button">
+                      <img src="assets/images/svg/menu.svg" alt="menu" />
+                  </button>
+                </li>
+              </ul>
+          </div>
+        </div>
+      </div>
+      <div class="max-w-max-width-xl w-full z-20 flex justify-end fixed left-1/2 -translate-x-1/2">
+        <div @click.away="open = false" :class="open ? 'h-[482px] md:h-[384px]' : 'h-0'" class="shadow-xl w-full max-w-full md:max-w-[283px] bg-white top-[100px] right-0 overflow-hidden duration-300">
+          <ul class="flex flex-col uppercase font-semibold text-xxs leading-3 tracking-link">
+            <li class="border-b border-text-60/20 block md:hidden">
+              <a class="px-8 md:px-12 py-7 md:py-8 block hover:bg-surface-20 duration-300" href="developments.html">Find your home</a>
+            </li>
+            <li class="border-b border-text-60/20 block md:hidden">
+              <a class="px-8 md:px-12 py-7 md:py-8 block hover:bg-surface-20 duration-300" href="customer-care.html">Customer care</a>
+            </li>
+            <li class="border-b border-text-60/20">
+              <a class="px-8 md:px-12 py-7 md:py-8 block hover:bg-surface-20 duration-300" href="lockley-bespoke.html">Bespoke homes</a>
+            </li>
+            <li class="border-b border-text-60/20">
+              <a class="px-8 md:px-12 py-7 md:py-8 block hover:bg-surface-20 duration-300" href="about-us.html">About Us</a>
+            </li>
+            <li class="border-b border-text-60/20">
+              <a class="px-8 md:px-12 py-7 md:py-8 block hover:bg-surface-20 duration-300" href="land.html">Land</a>
+            </li>
+            <li class="border-b border-text-60/20">
+              <a class="px-8 md:px-12 py-7 md:py-8 block hover:bg-surface-20 duration-300" href="latest-news.html">Latest News</a>
+            </li>
+            <li class="">
+              <a class="px-8 md:px-12 py-7 md:py-8 block hover:bg-surface-20 duration-300" href="contact-us.html">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <!-- Banner Section -->
+     <section class="bg-action-20 mt-[-100px] pt-[100px]">
+      <div class="w-full overflow-hidden">
+        <img data-aos="zoom-out" data-aos-delay="700" class="object-cover size-full max-h-[520px]" src="assets/images/contact-us/banner.jpg" />
+      </div>
+      <div class="max-w-max-width-xl w-full mx-auto px-4 md:px-6 lg:px-12">
+        <div class="flex flex-col gap-[18px] pt-8 pb-10 md:pt-14 md:pb-14 lg:pb-20">
+          <h2 data-aos="fade-up" data-aos-delay="750">Contact us</h2>
+          <h4 class="max-w-[690px]" data-aos="fade-up" data-aos-delay="800">Whether you’re looking for a new home or thinking about selling some land, we’d be delighted to hear from you. Either call or email the individual team member, or simply fill in the form below.</h4>
+        </div>
+      </div>
+     </section>
+
+
+    <!-- Contact Section -->
+    <section class="pt-14 md:pt-20">
+      <div class="max-w-max-width-xl w-full mx-auto px-4 md:px-6 lg:px-12">
+        <div class="grid grid-cols-1 xl:grid-cols-[406px_1fr] items-center gap-10 xl:gap-[73px] xl:-ml-12">
+          <div class="aspect-[406/488] max-h-[488px] mx-auto hidden xl:block">
+            <img data-aos="fade-in" class="object-cover size-full" src="assets/images/contact-us/contact.jpg" alt="content" />
+          </div>
+          <div class="flex flex-col gap-10 lg:gap-16">
+             <div class="flex flex-col gap-7">
+              <div data-aos="fade-up" class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <div class="flex flex-col gap-2">
+                  <p><b>Address</b></p>
+                  <p>Lockley Homes<br/>3b Tournament Court<br/>Edgehill Drive<br/>Warwick<br/>CV34 6L</p>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <p><b>Telephone</b></p>
+                  <p><a href="tel:01905691048">01905 691 048</a></p>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <p><b>Telephone</b></p>
+                  <p><a href="about-us.html">View team</a></p>
+                </div>
+                <ul class="flex gap-4">
+                   <li>
+                      <a href="javascript:;" target="_blank">
+                        <img src="assets/images/svg/facebook-dark.svg" alt="facebook"/>
+                      </a>
+                   </li>
+                   <li>
+                      <a href="javascript:;" target="_blank">
+                        <img src="assets/images/svg/instagram-dark.svg" alt="instagram"/>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="javascript:;" target="_blank">
+                        <img src="assets/images/svg/youtube-dark.svg" alt="youtube"/>
+                      </a>
+                  </li>
+                </ul>
+              </div>
+              <div data-aos="fade-up" class="flex justify-start">
+                <a href="javascript:;" class="btn btn-primary-outline">directions</a>
+              </div>
+             </div>
+             <form data-aos="fade-up" action="" class="flex flex-col md:grid md:grid-cols-2 gap-6">
+                <div class="flex flex-col gap-2">
+                  <label class="label" for="first-name">First name*</label>
+                  <input id="first-name" name="first-name" class="input" type="text" placeholder="First name" required>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <label class="label" for="last-name">Last name*</label>
+                  <input id="last-name" name="last-name" class="input" type="text" placeholder="Last name" required>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <label class="label" for="address-line-1">Address line 1*</label>
+                  <input id="address-line-1" name="address-line-1" class="input" type="text" placeholder="Address line 1" required>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <label class="label" for="address-line-1">Address line 2 (optional)</label>
+                  <input id="address-line-2" name="address-line-2" class="input" type="text" placeholder="Address line 2">
+                </div>
+                <div class="flex flex-col gap-2">
+                  <label class="label" for="city">City*</label>
+                  <input id="city" name="city" class="input" type="text" placeholder="City" required>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <label class="label" for="city">Postcode*</label>
+                  <input id="postcode" name="postcode" class="input" type="text" placeholder="Postcode" required>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <label class="label" for="email-address">Email address*</label>
+                  <input id="email-address" name="email-address" class="input" type="email" placeholder="Email address" required>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <label class="label" for="phone-number">Phone number*</label>
+                  <input id="phone-number" name="phone-number" class="input" type="text" placeholder="Phone number" required>
+                </div>
+                <div class="flex flex-col gap-2 col-span-2">
+                  <label class="label" for="message">Message*</label>
+                  <textarea id="message" name="message" class="textarea" placeholder="" required></textarea>
+                </div>
+                <div class="flex items-start gap-2 col-span-2">
+                  <input type="checkbox" class="size-4 accent-text-100 cursor-pointer mt-0.5">
+                  <div class="text-xxs font-light leading-4">By ticking this box you confirm that you have read our <a class="underline" target="_blank" href="javascript:;">Privacy Policy</a> and give consent to add your personal details to our database. <br/>These can be removed at any time by request.*</div>
+                </div>
+                <div class="col-span-2 text-xxs font-normal leading-4">
+                  *Indicates required fields.
+                </div>
+                <div class="col-span-2 flex justify-start">
+                  <button class="btn btn-primary" type="submit">Submit</button>
+                </div>
+             </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+      <!-- Blogs Section -->
+    <section class="py-14 md:py-20 relative">
+      <div class="max-w-max-width-xl w-full mx-auto px-4 md:px-6 lg:px-12">
+         <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-7">
+            <div data-aos="fade-up" class="flex flex-col gap-4">
+              <div class="aspect-[406/285]">
+                <img class="size-full object-cover" src="assets/images/blogs/blog-1.jpg" alt="blog-1">
+              </div>
+              <div class="flex flex-col gap-4 items-start">
+                <div class="flex flex-col gap-2">
+                  <h3>Introducing Lockley Bespoke</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                </div>
+                <a href="javascript:;" class="btn btn-primary">find out more</a>
+              </div>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="100" class="flex flex-col gap-4">
+              <div class="aspect-[406/285]">
+                <img class="size-full object-cover" src="assets/images/blogs/blog-2.jpg" alt="blog-2">
+              </div>
+              <div class="flex flex-col gap-4 items-start">
+                <div class="flex flex-col gap-2">
+                  <h3>Land opportunities</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                </div>
+                <a href="javascript:;" class="btn btn-primary">find out more</a>
+              </div>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="200" class="flex flex-col gap-4">
+              <div class="aspect-[406/285]">
+                <img class="size-full object-cover" src="assets/images/blogs/blog-3.jpg" alt="blog-3">
+              </div>
+              <div class="flex flex-col gap-4 items-start">
+                <div class="flex flex-col gap-2">
+                  <h3>Latest news and updates</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                </div>
+                <a href="javascript:;" class="btn btn-primary">find out more</a>
+              </div>
+            </div>
+         </div>
+      </div>
+    </section>
+
+
+     <!-- Footer -->
+      <footer class="bg-text-100 pt-12 pb-8">
+          <div class="max-w-max-width-xl w-full mx-auto px-4 md:px-6 lg:px-12">
+              <div class="flex flex-col gap-10 md:gap-7">
+                  <div class="flex flex-col items-center md:items-stretch md:flex-row justify-between gap-8 lg:gap-16">
+                    <div class="flex flex-col items-center md:items-start text-center md:text-start gap-8 md:gap-14 justify-between max-w-[410px] md:pb-5">
+                        <a href="index.html">
+                          <img src="assets/images/svg/logo-white.svg" alt="logo" />
+                        </a>
+                        <h6 class="text-lg leading-6 font-cormorant tracking-tight text-white">At Lockley Homes, we pride ourselves on creating desirable homes in the most sought-after locations throughout The Cotswolds, Worcestershire and Warwickshire.</h6>
+                    </div>
+                     
+                    <div class="flex flex-col md:flex-row gap-8 md:gap-16 shrink-0 text-center md:text-start">
+                      <ul class="text-xxs tracking-link leading-6 text-white uppercase hovered-links">
+                          <li class="font-semibold"><a href="#">Find your home</a></li>
+                          <li class="font-semibold"><a href="#">View all developments</a></li>
+                          <li>&nbsp;</li>
+                          <li><a href="#">homes in the cotswolds</a></li>
+                          <li><a href="#">homes in worcestershire</a></li>
+                          <li><a href="#">homes in warwickshire</a></li>
+                      </ul>
+                      <div class="flex flex-col md:items-start gap-8 md:gap-12">
+                        <ul class="text-xxs tracking-link leading-6 text-white uppercase hovered-links">
+                          <li><a href="#">About us</a></li>
+                          <li><a href="#">lockley Bespoke</a></li>
+                          <li><a href="#">customer care</a></li>
+                          <li><a href="#">customer charter</a></li>
+                          <li><a href="#">aftercare service</a></li>
+                          <li><a href="#">Land required</a></li>
+                          <li><a href="#">latest news</a></li>
+                          <li><a href="#">contact us</a></li>
+                      </ul>
+                      <ul class="flex self-center md:self-auto items-center gap-[18px]">
+                        <li>
+                          <a target="_blank" href="https://www.youtube.com/channel/UCzdjjKEo1BINeWM7WE_uqWg">
+                            <img src="assets/images/svg/youtube.svg" alt="youtube" />
+                          </a>
+                        </li>
+                        <li>
+                          <a target="_blank" href="https://www.facebook.com/lockleyhomes">
+                            <img src="assets/images/svg/facebook.svg" alt="facebook" />
+                          </a>
+                        </li>
+                        <li>
+                          <a target="_blank" href="https://instagram.com/lockleyhomes">
+                            <img src="assets/images/svg/instagram.svg" alt="instagram" />
+                          </a>
+                        </li>
+                      </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <ul class="flex flex-col md:flex-row items-center gap-4 md:gap-10 text-white text-xs">
+                    <li class="order-1 md:order-0">© 2025 Lockley Homes. All rights reserved.</li>
+                    <li><a target="_blank" href="#">Privacy policy</a></li>
+                    <li><a target="_blank" href="#">Site by TaylorGodley</a></li>
+                  </ul>
+              </div>
+          </div>
+      </footer>
+</body>
+
+ <!-- Apline JS -->
+ <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<!-- LightBox JS -->
+<script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+<!-- Main JS -->
+<script type="text/javascript" src="assets/js/main.js"></script>
+
+ 
+</html>

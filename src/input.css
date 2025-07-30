@@ -26,6 +26,10 @@
   --swiper-pagination-bullet-size: 12px;
 }
 
+html, body, .scrollbar {
+  scrollbar-width: thin;
+}
+
 b {
   @apply font-semibold
 }
@@ -74,8 +78,16 @@ h4, .h4 {
   @apply border-b border-transparent hover:border-text-100 duration-300 py-0.5
 }
 
-html, body, .scrollbar {
-  scrollbar-width: thin;
+.label {
+  @apply text-sm
+}
+
+.input {
+  @apply bg-surface-10 border-b border-b-action-80 p-2 text-sm placeholder:text-text-60 focus:outline-none
+}
+
+.textarea {
+  @apply bg-surface-10 border-b border-b-action-80 min-h-[132px] p-2 text-sm placeholder:text-text-60 focus:outline-none
 }
 
 @media (max-width: 767px) {
