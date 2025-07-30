@@ -26,6 +26,14 @@
   --swiper-pagination-bullet-size: 12px;
 }
 
+b {
+  @apply font-semibold
+}
+
+.list-decimal {
+  @apply list-image-[url(../../assets/images/svg/marker.svg)] list-none
+}
+
 h1, .h1 {
   @apply font-cormorant text-[64px] leading-[72px] font-normal tracking-tight
 }
@@ -33,7 +41,6 @@ h1, .h1 {
 h2, .h2 {
   @apply font-cormorant text-[48px] leading-[56px] font-normal tracking-tight
 }
- 
  
 h3, .h3 {
   @apply font-cormorant text-[32px] leading-10 font-normal tracking-tight
